@@ -21,26 +21,30 @@ body {
     background-repeat: no-repeat;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
+    padding: 20px;
 
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     max-width: 400px;
-    margin: 30px;
-    height: 600px;
+    margin: 0 auto;
+    
+    justify-content: center;
+    
    
 }
 
 .top {
+    width: 100%;
     background: var(--dark-blue);
-    padding: 40px;
+    padding: 30px;
     display: grid;
     
     border-radius: 10px  100px 10px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     
 }
 
@@ -49,6 +53,9 @@ body {
     margin: 15px 0 35px ;
 }
 
+.icons {
+    margin-bottom: 10px;
+}
 .icons div {
     width: 60px;
     background: var(--Very-Dark-Blue);
@@ -62,29 +69,63 @@ body {
 }
 
 .botton {
+    width: 100%;
     background: var(--dark-blue);
-   max-width: 400px;
+    max-width: 400px;
     border-radius: 10px;
     position: relative;
+    padding: 30px;
     
 }
 
 .botton > p {
     color: var(--Pale-Blue);
     text-align: center;
-    margin: 35px 0;
+    margin-bottom: 20px;
+  
 }
 
 .botton span {
     font-weight: bold;
 }
 
+.progress {
+    height: 20px;
+    border-radius: 100px;
+    margin: 10px 0;
+    box-shadow:  inset 0px 0px 7px 2px var(--Very-Dark-Blue); 
+    position: relative; 
+}
+
+.progress::before {
+    content: '';
+    width: 80%;
+    border-radius: 100px;
+    height: 15px;
+    background: linear-gradient( to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    position: absolute; 
+    top: 2px;
+    left: 2px;   
+}
+
+.progress::after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 100px;
+    top: 4.3px;
+    left:76.5%;
+    background: #fff;
+    position: absolute;
+    
+     
+}
+
 .gb {
     display: flex;
     justify-content: space-between;
     color: var(--Pale-Blue);
-    padding: 0px 40px 45px;
-    
+    padding-bottom:  25px;   
 }
 
 .float {
@@ -94,20 +135,17 @@ body {
     padding: 0.5em 1em;
     border-radius: 10px;
     position: absolute;
-    bottom: -40px;
-    left: 0; 
-    right: 0; 
-    bottom: -40px;
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 165px;
+    bottom: -30px;
+    left: 25%;
+    right: 25%;
     align-items: center;
-    align-content: center;
+    justify-content: center;
 }
 
 .float span {
     font-size: 40px;
     margin-right: 8px;
+    color: var(--Very-Dark-Blue);
 }
 
 .float p {
@@ -115,4 +153,14 @@ body {
     font-weight: 700;
     color: var(--Grayish-Blue);
     text-transform: uppercase;
+}
+
+@media (min-width:900px) {
+    body {
+        background: yellow;
+    }
+
+    .container {
+        display: flex;
+    }
 }
