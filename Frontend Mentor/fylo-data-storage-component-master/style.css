@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url(images/bg-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    margin: 30px;
+    height: 600px;
+   
+}
+
+.top {
+    background: var(--dark-blue);
+    padding: 40px;
+    display: grid;
+    
+    border-radius: 10px  100px 10px 10px;
+    margin-bottom: 20px;
+    
+}
+
+.top .logo{
+
+    margin: 15px 0 35px ;
+}
+
+.icons div {
+    width: 60px;
+    background: var(--Very-Dark-Blue);
+    height: 100%;
+    display: inline-flex;
+    border-radius: 10px;
+    line-height: 0;
+    padding: 15px;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.botton {
+    background: var(--dark-blue);
+   max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    
+}
+
+.botton > p {
+    color: var(--Pale-Blue);
+    text-align: center;
+    margin: 35px 0;
+}
+
+.botton span {
+    font-weight: bold;
+}
+
+.gb {
+    display: flex;
+    justify-content: space-between;
+    color: var(--Pale-Blue);
+    padding: 0px 40px 45px;
+    
+}
+
+.float {
+    display: flex;
+    background: #fff;
+    font-size: 20px;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    position: absolute;
+    bottom: -40px;
+    left: 0; 
+    right: 0; 
+    bottom: -40px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 165px;
+    align-items: center;
+    align-content: center;
+}
+
+.float span {
+    font-size: 40px;
+    margin-right: 8px;
+}
+
+.float p {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+}
