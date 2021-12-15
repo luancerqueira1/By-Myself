@@ -14,6 +14,10 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     background: url(images/bg-mobile.png);
@@ -28,13 +32,10 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 400px;
+    flex-grow: 0;
+    align-content: center;
+    align-items: flex-end;  
     margin: 0 auto;
-    
-    justify-content: center;
-    
-   
 }
 
 .top {
@@ -59,7 +60,7 @@ body {
 .icons div {
     width: 60px;
     background: var(--Very-Dark-Blue);
-    height: 100%;
+    height: 60px;
     display: inline-flex;
     border-radius: 10px;
     line-height: 0;
@@ -68,10 +69,12 @@ body {
     margin-right: 15px;
 }
 
+
+
 .botton {
     width: 100%;
     background: var(--dark-blue);
-    max-width: 400px;
+   
     border-radius: 10px;
     position: relative;
     padding: 30px;
@@ -105,7 +108,7 @@ body {
     background: linear-gradient( to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
     position: absolute; 
     top: 2px;
-    left: 2px;   
+    left: 3px;   
 }
 
 .progress::after {
@@ -114,11 +117,9 @@ body {
     height: 11px;
     border-radius: 100px;
     top: 4.3px;
-    left:76.5%;
+    right: 20%;
     background: #fff;
-    position: absolute;
-    
-     
+    position: absolute;    
 }
 
 .gb {
@@ -157,10 +158,55 @@ body {
 
 @media (min-width:900px) {
     body {
-        background: yellow;
+        justify-content: center;
+        align-items: center;
+        background: var(--Very-Dark-Blue) url(images/bg-desktop.png);
+        background-position:  bottom -50px  right ;
+       
+        background-repeat: no-repeat;
+        
     }
 
     .container {
+        width: 100%;
+       flex-direction: row;
+       justify-content: center;
+    }
+    .icons {
         display: flex;
     }
+
+    .top {
+        max-width: 400px;
+        margin-bottom: 0;
+        margin-right: 20px;
+    }
+
+    .botton {
+         max-width: 650px;
+    }
+    .botton p {
+        text-align: start;
+    }
+
+    .float {
+       position: absolute;
+       top: -60px;
+       bottom: 90%;
+       right: 5%;
+       left: 60%; 
+       border-radius: 10px 10px 0 10px; 
+    }
+
+    .float::before {
+        content: '';
+        background: chartreuse;
+        height: 40px;
+        width: 30px;
+        position: absolute;
+        bottom: -40px;
+        right: 0;
+        transform: skewX()(0deg, 0deg, 60deg);
+    }
+    
 }
