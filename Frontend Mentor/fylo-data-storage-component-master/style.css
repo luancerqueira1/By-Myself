@@ -200,13 +200,14 @@ body {
 
     .float::before {
         content: '';
-        background: chartreuse;
-        height: 40px;
-        width: 30px;
         position: absolute;
-        bottom: -40px;
+        border: 1em solid transparent;
+        bottom: -26px;
         right: 0;
-        transform: skewX()(0deg, 0deg, 60deg);
+        border-top-color: #fff;
+        border-right-color: #fff;
+        overflow: var(--Very-Dark-Blue);
+        
     }
     
 }
