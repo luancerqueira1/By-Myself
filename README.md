@@ -1,2 +1,2 @@
 # By-Myself
- Things That i do own my own
+ Things i do on my own
