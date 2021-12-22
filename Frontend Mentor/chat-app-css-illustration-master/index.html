@@ -8,6 +8,7 @@
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/5be6e0a9e7.js" crossorigin="anonymous"></script>
 
   
 </head>
@@ -16,20 +17,28 @@
   
     <section class="phone">
       <div class="user">
-        <h2>Samuel Green</h2>
-        <span>Available to Walk</span>
+        <div class="divide">
+          <i class="fas fa-chevron-left"></i>
+          <img src="images/avatar.jpg" alt="">
+          <div class="info">
+            <h2>Samuel Green</h2>
+            <span>Available to Walk</span>
+          </div>
+          <i class="fas fa-ellipsis-v"></i>
+        </div>
+       
       </div>
       <div class="message">
-        <p>That sounds great. <br> I’d be happy with that.</p>
-        <p>Could you send over some <br> pictures of your dog, please?</p>
+        <p class="chat-left">That sounds great. <br> I’d be happy with that.</p>
+        <p class="chat-left">Could you send over some <br> pictures of your dog, please?</p>
         <div class="dogs">
           <img src="images/dog-image-1.jpg" alt="">
           <img src="images/dog-image-2.jpg" alt="">
           <img src="images/dog-image-3.jpg" alt="">
         </div>
-        <p>Here are a few pictures. She’s <br> a happy girl!</p>
-        <p>Can you make it?</p>
-        <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+        <p class="chat-right">Here are a few pictures. She’s <br> a happy girl!</p>
+        <p class="chat-right">Can you make it?</p>
+        <p class="chat-left">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
         <div class="price">
           <p>30 minute walk
           <span>$29</span></p>
@@ -38,8 +47,9 @@
             <span>$49</span>
           </p>
         </div>
+        <div class="type">Type a message…</div>
       </div>
-      <div class="type">Type a message…</div>
+      
     </section>
   
     <section class="text">

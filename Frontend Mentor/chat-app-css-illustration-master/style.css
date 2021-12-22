@@ -11,6 +11,10 @@
     /*===== Gradients =====*/
     --Light--Magenta: hsl(293, 100%, 63%);
     --Light-Violet: hsl(264, 100%, 61%);
+
+    /*====== Secondary ======*/
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
 }
 * {
     margin: 0;
@@ -21,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: 'Rubik', sans-serif;
     
 }
 
@@ -33,13 +38,117 @@ body::after {
     width: 500px;
     height: 75%;
     border-radius: 0 0 300px 300px;
-    background: linear-gradient(to bottom ,var(--Light--Magenta),var(--Light-Violet));
+    background: var(--Light-Violet);
 }
 
 .container {
     margin: 0 20px;
 }
 
+/*===== Phone =====*/
 .phone {
+    background-color: #fff;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 13px;
+    border-radius: 35px;
+    box-shadow: 3px 3px 20px 6px rgba(0, 0, 0, 0.2);
+}
+
+.phone img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+/*===== User =====*/
+.user {
+    display: flex;
+    background: linear-gradient(to right, var(--Light-Violet), var( --Light--Magenta));
+    border-radius: 30px 30px 7px 7px;
+    height:100px;
+    align-items: flex-end;
+   
+    color: #fff;
+    justify-content: space-between; 
+    padding: 0 20px 10px; 
+    position: relative;   
+}
+
+.user::before {
+    content: '';
+    position: absolute;
+    top: -13px;
+    right: 25%;
+    left: 25%;
+   
+    height: 35px;
+    border-radius: 100px;
+    color: #fff;
+    background: #fff;
+}
+
+.user  .fa-ellipsis-v {
+    position: absolute;
+    right: 20px;
+}
+
+.user img {
+    margin: 0 10px;
+}
+
+.user h2 {
+    font-size: 18px;
+    color: var(--Light-Grayish-Violet);
+}
+
+.user span {
+    font-size: 13px;
+    color: var(--Grayish-Blue);
+}
+
+.divide {
+   padding-bottom: 5px; 
+}
+
+/*===== message =====*/
+
+.message p {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+.message .chat-left {
+    color: var(--Moderate-Violet);
+    background: var(--Grayish-Blue);
+    border-radius: 10px;
+}
+
+.message .chat-right {
+    color: var(--Desaturated-Dark-Violet);
+    background: #fff;
+}
+
+.divide {
+    display: flex;
+    align-items: center;
+}
+
+.dogs {
+    display: flex;
+    justify-content: flex-end;
     
+}
+
+.dogs img {
+    width: 60px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+.message {
+    background: var(--Light-Grayish-Violet);
+    border-radius:  0 0 30px 30px;
+    margin-top: 20px;
 }
