@@ -9,13 +9,15 @@
     --Dark-Grayish-Violet: hsl(270, 7%, 64%);
 
     /*===== Gradients =====*/
-    --Light--Magenta: hsl(293, 100%, 63%);
+    --Light-Magenta: hsl(293, 100%, 63%);
     --Light-Violet: hsl(264, 100%, 61%);
 
     /*====== Secondary ======*/
     --Light-Grayish-Violet: hsl(270, 20%, 96%);
     --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
 }
+
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +38,7 @@ body::after {
     top: 0;
     left: -250px;
     width: 500px;
-    height: 75%;
+    height: 80%;
     border-radius: 0 0 300px 300px;
     background: var(--Light-Violet);
 }
@@ -48,7 +50,7 @@ body::after {
 /*===== Phone =====*/
 .phone {
     background-color: #fff;
-    max-width: 400px;
+    max-width: 375px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 13px;
@@ -62,10 +64,15 @@ body::after {
     border-radius: 100px;
 }
 
+.phone-container {
+    background: var(--Light-Grayish-Violet);
+    border-radius: 35px;
+}
+
 /*===== User =====*/
 .user {
     display: flex;
-    background: linear-gradient(to right, var(--Light-Violet), var( --Light--Magenta));
+    background: linear-gradient(to right, var(--Light-Violet), var( --Light-Magenta));
     border-radius: 30px 30px 7px 7px;
     height:100px;
     align-items: flex-end;
@@ -113,22 +120,32 @@ body::after {
 }
 
 /*===== message =====*/
+.message {
+    border-radius:  0 0 30px 30px;
+    margin-top: 20px;
+}
 
 .message p {
     padding: 10px;
-    width: 200px;
+    width: fit-content;
     margin-bottom: 15px;
     margin-left: 15px;
+    border-radius: 10px;
+    font-size: 14px;
 }
+
 .message .chat-left {
     color: var(--Moderate-Violet);
-    background: var(--Grayish-Blue);
-    border-radius: 10px;
+    background: var(--Grayish-Blue);   
 }
 
 .message .chat-right {
     color: var(--Desaturated-Dark-Violet);
     background: #fff;
+    display: flex;
+    margin-left: auto;
+    justify-content: flex-end;
+    margin-right: 15px;
 }
 
 .divide {
@@ -138,17 +155,40 @@ body::after {
 
 .dogs {
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: flex-end;   
 }
 
 .dogs img {
     width: 60px;
+    height: 60px;
     border-radius: 12px;
     margin-right: 10px;
+    margin-bottom: 15px;
 }
-.message {
-    background: var(--Light-Grayish-Violet);
-    border-radius:  0 0 30px 30px;
-    margin-top: 20px;
+
+.price p {
+    width: 70%;
+    position: relative;
+    padding: 14px;
+    background: linear-gradient(to right, var(--Light-Magenta), var(--Light-Violet));
+    color: #fff;
+    color: var(--Light-Grayish-Violet);  
 }
+
+.price p i {
+   margin-right: 5px;  
+   color: var(--Light-Grayish-Violet);
+   font-size: 16px;
+}
+
+.price span {
+    right: 15px;
+    position: absolute;
+    font-weight: bolder;
+   
+}
+
+
+
+
+
