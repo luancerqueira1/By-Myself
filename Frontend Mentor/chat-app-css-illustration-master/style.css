@@ -24,9 +24,9 @@
     box-sizing: border-box;
 }
 body {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     font-family: 'Rubik', sans-serif;
     
 }
@@ -51,6 +51,7 @@ body::after {
 .phone {
     background-color: #fff;
     max-width: 375px;
+    min-width: 375px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 13px;
@@ -67,6 +68,7 @@ body::after {
 .phone-container {
     background: var(--Light-Grayish-Violet);
     border-radius: 35px;
+    padding-bottom: 15px;
 }
 
 /*===== User =====*/
@@ -125,7 +127,7 @@ body::after {
     margin-top: 20px;
 }
 
-.message p {
+.message > p {
     padding: 10px;
     width: fit-content;
     margin-bottom: 15px;
@@ -170,9 +172,14 @@ body::after {
     width: 70%;
     position: relative;
     padding: 14px;
+    
+    border-radius: 10px; 
+    margin-bottom: 10px;
+    margin-left: 10px;
+
     background: linear-gradient(to right, var(--Light-Magenta), var(--Light-Violet));
     color: #fff;
-    color: var(--Light-Grayish-Violet);  
+    color: var(--Light-Grayish-Violet);
 }
 
 .price p i {
@@ -185,10 +192,86 @@ body::after {
     right: 15px;
     position: absolute;
     font-weight: bolder;
-   
 }
 
 
+.type {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 8px 0;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 100px;   
+}
+
+.type p {
+    color: var(--Grayish-Blue);
+    margin: 7px 0 0 20px;
+    
+}
+
+.type i {
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*====== text =====*/
+.text {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+}
+
+.text h1 {
+    margin: 50px 0;
+    font-size: 50px;
+    color: var(--Very-Dark-Desaturated-Violet);
+}
+
+.text p {
+    color: var(--Grayish-Blue);
+    line-height: 1.5;
+}
+
+.footer {
+   
+   background-color: #333;
+   color: #fff;
+   padding: 15px;
+    
+   
+}
+
+@media (min-width:1000px) {
+    body::after {
+        width: 600px;
+        left: -70px;
+        height: 90%;  
+    }
+
+    .phone {
+        margin:  80px 0 0 350px ;
+       
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+      
+    }
+
+    .text {
+        text-align: left;
+       margin-left: 5%;
+    }
+}
 
 
 
