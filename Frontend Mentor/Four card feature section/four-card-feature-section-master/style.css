@@ -4,7 +4,7 @@
     --Red: hsl(0, 78%, 62%);
     --Cyan: hsl(180, 62%, 55%);
     --Orange: hsl(34, 97%, 64%);
-    -Blue: hsl(212, 86%, 64%);
+    --Blue: hsl(212, 86%, 64%);
 
     --Very-Dark-Blue: hsl(234, 12%, 34%);
     --Grayish-Blue: hsl(229, 6%, 66%);
@@ -19,9 +19,10 @@
 
 body {
     height: 100vh;
-    width: 100vw;
     font-family: 'Poppins', sans-serif;
     background: var(--Very-Light-Gray);
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -40,9 +41,112 @@ main {
 
 .headin h1 {
     color: var(--Very-Dark-Blue);
+    margin-bottom: 10PX;
 }
 
 .headin p {
+    max-width: 500PX;
     margin: 0 auto;
     color: var(--Grayish-Blue);
+   
 }
+
+/*===== cards =====*/
+.cards {
+    display: grid;
+    gap: 25px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.card h2 {
+    color: var(--Very-Dark-Blue);
+}
+.card p {
+   
+    color: var(--Grayish-Blue);
+}
+
+.card .img {
+    align-self: flex-end;
+    margin-top: 30px;   
+}
+
+.card1 {
+    border-top: 4px solid var(--Cyan);
+    margin-top: 70px;
+    
+}
+
+.card2 {
+    border-top: 4px solid var(--Red);
+    
+}
+
+.card3 {
+    border-top: 4px solid var(--Orange);
+}
+
+.card4 {
+    border-top: 4px solid var(--Blue);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: auto;
+    position: sticky;
+    top: 1px;
+    padding: 2em;
+}
+
+
+/*====== desk =====*/
+@media (min-width:900px) {
+
+    .headin p {
+        margin-bottom: 40px;
+    }
+    .cards {
+        display: grid;
+        max-width: 1200px;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 0.5fr);
+        grid-template-areas: 
+        " .      card2    . "
+        " card1  card2   card4 "
+        " card1  card3   card4 "
+        " .      card3   .  " ;  
+    }
+
+    .card1 {
+        margin-top: 0;
+        grid-area: card1 ;
+        margin-right: 0;
+    }
+
+    .card2 {
+        grid-area: card2;
+    }
+
+    .card3 {
+        grid-area: card3;
+    }
+
+    .card4 {
+        grid-area: card4;
+        margin-left: 0;
+    }
+}
+
