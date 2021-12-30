@@ -279,7 +279,7 @@ footer .socials  img + img {
         
     }
 
-    footer .links a +a {
+    footer .links a + a {
         margin-left: 40px;
     }
 }
