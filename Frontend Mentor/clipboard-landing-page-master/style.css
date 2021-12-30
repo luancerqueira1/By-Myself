@@ -20,8 +20,9 @@ body {
 }
 
 #container {
-   margin: 0 auto;
-   max-width: 1440px;
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 20px;
     
 }
 
@@ -107,7 +108,7 @@ section h2 {
 
 section > p {
     text-align: center;
-    max-width: 500px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
@@ -124,7 +125,13 @@ section > p {
 
 .snippets {
     text-align: center;
-    margin: 110px 0;
+    margin: 110px 0;  
+}
+
+.snippets-style {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .snippets h3 {
@@ -161,13 +168,120 @@ footer a {
     margin-top: 20px;
 }
 
+footer a:hover {
+    color: var(--Dark-Grayish-Blue);
+}
+
 
 footer .socials  img {
     width: 30px;
 }
 
+
 footer .socials  img + img {
     margin-left: 20px;
+}
+
+
+
+
+/*============================*/
+@media (min-width:1200px) {
+    .logo {
+        background: url(images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    } 
+    
+    header h1 {
+        margin-top: -40px;
+        font-size: 40px;
+    }
+
+    h2,
+    h3 {
+        font-size: 29px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    section h2 {
+        margin-top: 100px;
+    }
+
+    section p {
+        margin-bottom: 3%;
+    }
+
+    
+    .btns {
+        display: flex;
+        justify-content: center;     
+    }
+
+    .btn {
+        margin: 40px 20px;
+    }
+
+    .snippets {
+        display: flex;
+        justify-content: center;  
+    }
+
+   
+
+    .section-2 .img-trabalho {
+        width: 800px;
+        margin: 0 auto;
+    }
+
+    .snippets-style {
+        margin:0;
+    }
+
+    .snippets-style p {
+        max-width: 550px;
+    }
+
+    .snippets-2 h3,
+    .snippets-2 p {
+        text-align: left;
+        max-width: 400px;
+        line-height: 1.5;  
+    }
+
+
+    .snippets > img {
+        width: 700px;
+        margin-right: 100px;
+        
+    }
+
+    .snippets-style {
+        margin-top: 60px;
+    }
+
+    .companies {
+        margin-top: 90px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    footer .links  {
+        display: flex;
+        
+    }
+
+    footer .links a +a {
+        margin-left: 40px;
+    }
 }
 
    
