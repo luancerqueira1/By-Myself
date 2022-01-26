@@ -3,6 +3,7 @@
 @use 'body';
 @use 'footer';
 @use 'variables';
+@use 'mixins';
 
 
 * {
@@ -14,4 +15,5 @@
 
 body {
     font-family: variables.$ff-primary;
+    font-size: 18px;
 }

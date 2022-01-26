@@ -1,0 +1,27 @@
+@use 'variables';
+@use 'mixins' as *;
+
+main {
+    @include contain;
+}
+
+.card {
+    text-align: center;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+
+    img {
+        padding: 3.5rem;
+    }
+
+    h2 {
+        margin: 4rem 0 1rem;
+    }
+    p {
+        color: variables.$Grayish-Blue;
+        line-height: 1.4;
+        padding: 0rem 2rem 3rem;
+        
+    }
+}

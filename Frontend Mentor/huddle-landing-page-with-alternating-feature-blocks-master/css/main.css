@@ -1,5 +1,5 @@
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 header {
@@ -10,10 +10,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 1.5rem 5rem;
+  padding: 1.5rem 1rem 0;
+  margin-bottom: 70px;
 }
 nav img {
-  width: 145px;
+  width: 125px;
   height: 20px;
 }
 nav a {
@@ -26,6 +27,53 @@ nav a {
   box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 10px;
 }
 
+.container-header {
+  text-align: center;
+  margin: 0 20px;
+  margin-bottom: 5rem;
+}
+.container-header h1 {
+  margin-bottom: 2.5rem;
+}
+.container-header p {
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+.container-header a {
+  display: inline-block;
+  background-color: #ff52bf;
+  color: #fff;
+  padding: 0.8rem 5rem;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+}
+.container-header img {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+main {
+  margin: 0 20px;
+}
+
+.card {
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+.card img {
+  padding: 3.5rem;
+}
+.card h2 {
+  margin: 4rem 0 1rem;
+}
+.card p {
+  color: #808d99;
+  line-height: 1.4;
+  padding: 0rem 2rem 3rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +83,7 @@ nav a {
 
 body {
   font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
