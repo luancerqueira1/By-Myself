@@ -39,7 +39,12 @@ nav a {
   margin-bottom: 2rem;
   line-height: 1.5;
 }
-.container-header a {
+.container-header img {
+  padding: 0 1rem;
+  margin-bottom: 3rem;
+}
+
+.btn {
   display: inline-block;
   background-color: #ff52bf;
   color: #fff;
@@ -47,20 +52,26 @@ nav a {
   border-radius: 100px;
   margin-bottom: 2rem;
 }
-.container-header img {
-  padding: 0 1rem;
-  margin-bottom: 3rem;
-}
 
 main {
   margin: 0 20px;
+  position: relative;
 }
-
+main section {
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: rem;
+  border-radius: 1rem;
+}
+main section h2 {
+  margin: 2rem 0;
+}
 .card {
+  background: #fff;
   text-align: center;
   border-radius: 1rem;
   margin-bottom: 3rem;
-  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .card img {
   padding: 3.5rem;
@@ -70,7 +81,7 @@ main {
 }
 .card p {
   color: #808d99;
-  line-height: 1.4;
+  line-height: 1.5;
   padding: 0rem 2rem 3rem;
 }
 

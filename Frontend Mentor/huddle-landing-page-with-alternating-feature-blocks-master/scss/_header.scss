@@ -34,6 +34,7 @@ nav {
     }  
 }
 
+
 .container-header {
     text-align: center;
     @include contain;
@@ -46,18 +47,19 @@ nav {
         margin-bottom: 2rem;
         line-height: 1.5;
     }
-    a {
+    img {
+        padding: 0 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.btn{
         display: inline-block;
         background-color: variables.$Pink;
         color: variables.$white;
         padding: .8rem 5rem;
         border-radius: 100px;
         margin-bottom: 2rem;
-    }
-    img {
-        padding: 0 1rem;
-        margin-bottom: 3rem;
-    }
 }
 
 
