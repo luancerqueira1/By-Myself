@@ -1,4 +1,13 @@
+@use 'variables';
 
 @mixin contain {
        margin: 0 20px;
+}
+
+@mixin btn {
+       display: inline-block;
+       background-color: variables.$Pink;
+       color: variables.$white;
+       border-radius: 100px;
+         
 }

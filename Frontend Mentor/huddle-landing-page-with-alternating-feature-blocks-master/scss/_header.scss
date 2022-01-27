@@ -51,16 +51,16 @@ nav {
         padding: 0 1rem;
         margin-bottom: 3rem;
     }
-}
 
-.btn{
-        display: inline-block;
-        background-color: variables.$Pink;
-        color: variables.$white;
-        padding: .8rem 5rem;
+    .btn {
+        @include btn;
+        padding: .9rem 5rem;
         border-radius: 100px;
         margin-bottom: 2rem;
+    }
 }
+
+
 
 
 

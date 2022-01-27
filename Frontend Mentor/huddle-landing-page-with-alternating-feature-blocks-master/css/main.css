@@ -43,12 +43,12 @@ nav a {
   padding: 0 1rem;
   margin-bottom: 3rem;
 }
-
-.btn {
+.container-header .btn {
   display: inline-block;
   background-color: #ff52bf;
   color: #fff;
-  padding: 0.8rem 5rem;
+  border-radius: 100px;
+  padding: 0.9rem 5rem;
   border-radius: 100px;
   margin-bottom: 2rem;
 }
@@ -57,15 +57,7 @@ main {
   margin: 0 20px;
   position: relative;
 }
-main section {
-  text-align: center;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: rem;
-  border-radius: 1rem;
-}
-main section h2 {
-  margin: 2rem 0;
-}
+
 .card {
   background: #fff;
   text-align: center;
@@ -83,6 +75,48 @@ main section h2 {
   color: #808d99;
   line-height: 1.5;
   padding: 0rem 2rem 3rem;
+}
+.card:last-child {
+  margin-bottom: 12rem;
+}
+
+footer {
+  background-color: #00252e;
+  position: relative;
+}
+footer section {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -7rem;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  background: #fff;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+}
+footer section h2 {
+  margin: 3rem 0 2rem;
+  font-size: 20px;
+}
+footer section a {
+  display: inline-block;
+  background-color: #ff52bf;
+  color: #fff;
+  border-radius: 100px;
+  padding: 0.9rem 3rem;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+footer a {
+  color: #fff;
+}
+footer .contact {
+  padding-top: 10rem;
 }
 
 * {

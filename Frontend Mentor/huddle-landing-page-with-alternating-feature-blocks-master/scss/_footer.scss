@@ -1,0 +1,44 @@
+
+@use 'variables';
+@use 'mixins';
+
+footer {
+    background-color: variables.$Very-Dark-Cyan;
+    position: relative;
+
+     section {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -7rem;
+        width: 90%;
+        max-width: 800px;
+        border-radius: 1rem;
+        margin-left: auto; 
+        margin-right: auto; 
+        align-items: center;
+        background: variables.$white;
+        text-align: center;
+        box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+
+        h2 {
+            margin: 3rem 0 2rem;
+            font-size: 20px;
+        }
+
+        a {
+            @include mixins.btn;
+            padding: 0.9rem 3rem;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        } 
+    }
+
+    a {
+        color: variables.$white;
+    }
+
+    .contact {
+        padding-top: 10rem;
+    }
+}
