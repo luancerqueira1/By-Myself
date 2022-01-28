@@ -34,6 +34,7 @@ nav a {
 }
 .container-header h1 {
   margin-bottom: 2.5rem;
+  color: #00252e;
 }
 .container-header p {
   margin-bottom: 2rem;
@@ -70,6 +71,7 @@ main {
 }
 .card h2 {
   margin: 4rem 0 1rem;
+  color: #00252e;
 }
 .card p {
   color: #808d99;
@@ -81,8 +83,9 @@ main {
 }
 
 footer {
-  background-color: #00252e;
+  background: #00252e;
   position: relative;
+  padding-top: 10rem;
 }
 footer section {
   position: absolute;
@@ -102,6 +105,7 @@ footer section {
 footer section h2 {
   margin: 3rem 0 2rem;
   font-size: 20px;
+  color: #00252e;
 }
 footer section a {
   display: inline-block;
@@ -112,11 +116,22 @@ footer section a {
   margin-bottom: 3rem;
   font-size: 1rem;
 }
+footer .footer-container {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+footer .footer-info a {
+  display: block;
+}
 footer a {
   color: #fff;
 }
-footer .contact {
-  padding-top: 10rem;
+footer .contact a {
+  display: block;
+}
+footer .contact .logo-footer {
+  filter: brightness(0) invert(1);
 }
 
 * {
