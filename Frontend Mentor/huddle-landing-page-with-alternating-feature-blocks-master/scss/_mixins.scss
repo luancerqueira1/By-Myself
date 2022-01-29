@@ -11,3 +11,7 @@
        border-radius: 100px;
          
 }
+
+@mixin maxwidth {
+       max-width: 1440px;
+}
