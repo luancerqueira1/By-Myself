@@ -6,7 +6,7 @@ header {
     background: variables.$Very-Pale-Cyan url(/images/bg-hero-mobile.svg) no-repeat center/ cover;
 
     @include media-md {
-        @include maxwidth;
+        @include max-width;
         margin: 0 auto;
     }
      
@@ -77,7 +77,7 @@ nav {
         margin-bottom: 3rem;
 
         @include media-md {
-            max-width: 700px;
+            max-width: 600px;
         } 
     }
 

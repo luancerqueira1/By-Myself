@@ -3,7 +3,9 @@
 
 main {
     @include contain;
+    @include max-width;
     position: relative;
+    margin: 0 auto;
 
 }
 
@@ -24,9 +26,25 @@ main {
         max-width: 600px;
         padding: 3.5rem;
     }
+    .card-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3rem 0;
+
+        @include media-md {
+            align-items: flex-start;
+            text-align: start;
+            padding: 3rem;
+        }
+
+         @include media-md {
+            order: -1;
+        }
+    }
 
     h2 {
-        margin: 4rem 0 1rem;
+        
         color: variables.$Very-Dark-Cyan;
     }
     
@@ -34,7 +52,11 @@ main {
         color: variables.$Grayish-Blue;
         line-height: 1.5;
         padding: 0rem 2rem 3rem;
-        
+
+        @include media-md {
+            padding: 0;
+        }
+       
     }
 
     &:last-child {

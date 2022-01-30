@@ -73,7 +73,7 @@ nav a {
 }
 @media screen and (min-width: 768px) {
   .container-header img {
-    max-width: 700px;
+    max-width: 600px;
   }
 }
 .container-header .btn {
@@ -88,7 +88,9 @@ nav a {
 
 main {
   margin: 0 20px;
+  max-width: 1440px;
   position: relative;
+  margin: 0 auto;
 }
 
 .card {
@@ -109,14 +111,36 @@ main {
   max-width: 600px;
   padding: 3.5rem;
 }
+.card .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+  .card .card-info {
+    align-items: flex-start;
+    text-align: start;
+    padding: 3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card .card-info {
+    order: -1;
+  }
+}
 .card h2 {
-  margin: 4rem 0 1rem;
   color: #00252e;
 }
 .card p {
   color: #808d99;
   line-height: 1.5;
   padding: 0rem 2rem 3rem;
+}
+@media screen and (min-width: 768px) {
+  .card p {
+    padding: 0;
+  }
 }
 .card:last-child {
   margin-bottom: 12rem;
@@ -160,8 +184,8 @@ footer section a {
 }
 footer .logo-footer {
   filter: brightness(0) invert(1);
-  width: 125px;
-  height: 20px;
+  width: 165px;
+  height: 30px;
   margin-bottom: 1.5rem;
   margin-top: 10rem;
   margin-left: 20px;
@@ -190,7 +214,7 @@ footer .footer-container .footer-info {
 }
 footer .footer-container .footer-info li {
   list-style: none;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 footer .footer-container .socials {
   filter: brightness(0) invert(1);
