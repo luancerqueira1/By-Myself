@@ -15,3 +15,21 @@
 @mixin maxwidth {
        max-width: 1440px;
 }
+
+//Responsive
+@mixin media-md {
+    @media screen and (min-width: 768px){
+        @content;
+    }
+ }
+
+ @mixin media-lg {
+     @media screen and (min-width:1200px) {
+         @content;
+     }
+ }
+
+ @mixin contain-resonsive {
+       margin-left:5rem;
+       margin-right: 5rem;
+ }

@@ -1,13 +1,15 @@
 @use 'variables';
-@use 'mixins' as *;
+@use 'mixins' as * ;
 
-
-img {
-    max-width: 100%;
-}
 
 header {
     background: variables.$Very-Pale-Cyan url(/images/bg-hero-mobile.svg) no-repeat center/ cover;
+
+    @include media-md {
+        @include maxwidth;
+        margin: 0 auto;
+    }
+     
 }
 
 nav {
@@ -16,6 +18,10 @@ nav {
     align-items: center;
     padding: 1.5rem 1rem 0;
     margin-bottom: 70px;
+
+    @include media-lg {
+        @include contain-resonsive;
+    }
    
 
     img {
@@ -40,17 +46,39 @@ nav {
     @include contain;
     margin-bottom: 5rem;
 
+    @include media-lg  {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        text-align: start;
+        @include contain-resonsive;
+    }
+
     h1 {
         margin-bottom: 2.5rem;
         color: variables.$Very-Dark-Cyan;
+
+        @include media-lg {
+            margin-bottom: 0;
+            max-width: 500px;
+        }
     }
     p {
         margin-bottom: 2rem;
         line-height: 1.5;
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+       
     }
+
     img {
-        padding: 0 1rem;
+        width: 100%;
         margin-bottom: 3rem;
+
+        @include media-md {
+            max-width: 700px;
+        } 
     }
 
     .btn {
@@ -60,8 +88,3 @@ nav {
         margin-bottom: 3rem;
     }
 }
-
-
-
-
-
