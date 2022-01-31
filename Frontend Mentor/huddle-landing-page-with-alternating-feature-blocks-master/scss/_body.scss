@@ -31,21 +31,30 @@ main {
         flex-direction: column;
         justify-content: center;
         margin: 3rem 0;
+        border: 2px solid red;
+        order: 1;
+
+        &:first-child {
+            border: 2px solid rgb(31, 44, 216);
+            order: -1;
+        }
 
         @include media-md {
             align-items: flex-start;
             text-align: start;
-            padding: 3rem;
-        }
+            padding: 3rem;    
 
-         @include media-md {
-            order: -1;
+            
         }
     }
 
     h2 {
         
         color: variables.$Very-Dark-Cyan;
+
+        @include media-md {
+            margin-bottom: 1rem;
+        }
     }
     
     p {
@@ -61,6 +70,6 @@ main {
 
     &:last-child {
     margin-bottom: 12rem;
-}
+    }
 }
 
