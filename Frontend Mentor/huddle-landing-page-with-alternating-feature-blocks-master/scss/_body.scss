@@ -22,7 +22,14 @@ main {
         grid-template-columns: repeat(2,1fr);
         margin-right: 3rem;
         margin-left: 3rem;
+
+         &:nth-child(odd) .card-info {
+            order: -1;
     }
+    }
+
+   
+
 
     img {
         width: 100%;
@@ -71,7 +78,5 @@ main {
     }
 }
 
-.card:nth-child(odd) .card-info {
-   order: -1;
-}
+
 
