@@ -10,6 +10,7 @@ main {
 }
 
 .card {
+    @include contain;
     background: variables.$white;
     text-align: center;
     border-radius: 1rem;
@@ -19,6 +20,8 @@ main {
     @include media-md {
         display: grid;
         grid-template-columns: repeat(2,1fr);
+        margin-right: 3rem;
+        margin-left: 3rem;
     }
 
     img {
@@ -31,13 +34,8 @@ main {
         flex-direction: column;
         justify-content: center;
         margin: 3rem 0;
-        border: 2px solid red;
-        order: 1;
 
-        &:first-child {
-            border: 2px solid rgb(31, 44, 216);
-            order: -1;
-        }
+        
 
         @include media-md {
             align-items: flex-start;
@@ -71,5 +69,9 @@ main {
     &:last-child {
     margin-bottom: 12rem;
     }
+}
+
+.card:nth-child(odd) .card-info {
+   order: -1;
 }
 

@@ -15,7 +15,7 @@ nav {
   padding: 1.5rem 1rem 0;
   margin-bottom: 70px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   nav {
     margin-left: 5rem;
     margin-right: 5rem;
@@ -40,7 +40,7 @@ nav a {
   margin: 0 20px;
   margin-bottom: 5rem;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   .container-header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@ nav a {
   margin-bottom: 2.5rem;
   color: #00252e;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1300px) {
   .container-header h1 {
     margin-bottom: 0;
     max-width: 500px;
@@ -94,6 +94,7 @@ main {
 }
 
 .card {
+  margin: 0 20px;
   background: #fff;
   text-align: center;
   border-radius: 1rem;
@@ -104,6 +105,8 @@ main {
   .card {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    margin-right: 3rem;
+    margin-left: 3rem;
   }
 }
 .card img {
@@ -116,12 +119,6 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 3rem 0;
-  border: 2px solid red;
-  order: 1;
-}
-.card .card-info:first-child {
-  border: 2px solid #1f2cd8;
-  order: -1;
 }
 @media screen and (min-width: 768px) {
   .card .card-info {
@@ -150,6 +147,10 @@ main {
 }
 .card:last-child {
   margin-bottom: 12rem;
+}
+
+.card:nth-child(odd) .card-info {
+  order: -1;
 }
 
 footer {
@@ -193,15 +194,25 @@ footer .logo-footer {
   width: 165px;
   height: 30px;
   margin-bottom: 1.5rem;
-  margin-top: 10rem;
-  margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  footer .logo-footer {
+    max-width: 1440px;
+  }
 }
 footer .footer-container {
   max-width: 1440px;
   margin: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  column-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  column-gap: 6rem;
+  padding-top: 10rem;
+}
+@media screen and (min-width: 1300px) {
+  footer .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
 footer .footer-container .contact {
   margin-bottom: 2rem;
@@ -218,6 +229,13 @@ footer .footer-container .contact li img {
 footer .footer-container .footer-info {
   margin-bottom: 3rem;
 }
+@media screen and (min-width: 768px) {
+  footer .footer-container .footer-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: flex-start;
+  }
+}
 footer .footer-container .footer-info li {
   list-style: none;
   margin-bottom: 1rem;
@@ -228,6 +246,17 @@ footer .footer-container .socials {
   justify-content: center;
   align-items: flex-start;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-container .socials {
+    max-width: 1440px;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 1300px) {
+  footer .footer-container .socials {
+    justify-content: center;
+  }
 }
 footer .footer-container .socials i {
   font-size: 1.3rem;
@@ -241,6 +270,12 @@ footer .copyright {
   text-align: center;
   margin: 2rem 0;
   font-weight: lighter;
+}
+@media screen and (min-width: 1300px) {
+  footer .copyright {
+    text-align: end;
+    margin-right: 6rem;
+  }
 }
 footer .attribution {
   text-align: center;

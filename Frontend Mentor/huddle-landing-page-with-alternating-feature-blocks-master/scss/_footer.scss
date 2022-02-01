@@ -44,18 +44,25 @@ footer {
             width: 165px;
             height: 30px; 
             margin-bottom: 1.5rem;
-            margin-top: 10rem;
-            margin-left: 20px;
-        }
+            
+            @include mixins.media-md {
+                @include mixins.max-width;
+            }
+    }
 
    
     .footer-container {
         @include mixins.max-width;
         @include mixins.contain;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        column-gap: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        column-gap: 6rem;
+        padding-top: 10rem;
 
+          @include mixins.media-lg {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
          .contact {
              margin-bottom: 2rem;
 
@@ -75,6 +82,14 @@ footer {
         .footer-info {
             margin-bottom: 3rem;
 
+            @include mixins.media-md {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                align-content: flex-start;
+                
+                
+            }
+
             li {
                 list-style: none;
                 margin-bottom: 1rem;
@@ -87,6 +102,17 @@ footer {
             justify-content: center;
             align-items: flex-start;
             cursor: pointer;
+
+            @include mixins.media-md {
+                @include mixins.max-width;
+                justify-content: flex-start;
+                
+            }
+
+            @include mixins.media-lg {
+                justify-content: center;
+                
+            }
         
             i {
                 font-size: 1.3rem;
@@ -103,6 +129,11 @@ footer {
         text-align: center;
         margin: 2rem 0;
         font-weight: lighter;
+
+         @include mixins.media-lg {
+             text-align: end;
+             margin-right: 6rem;
+         }
     }
 
     .attribution {
