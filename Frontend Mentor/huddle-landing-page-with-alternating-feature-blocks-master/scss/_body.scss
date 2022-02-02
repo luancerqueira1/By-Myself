@@ -17,49 +17,42 @@ main {
     margin-bottom: 3rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-    @include media-md {
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        margin-right: 3rem;
-        margin-left: 3rem;
+        @include media-md {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin-right: 3rem;
+            margin-left: 3rem;
 
-         &:nth-child(odd) .card-info {
-            order: -1;
-    }
-    }
-
-   
-
+            &:nth-child(odd) .card-info {
+                order: -1;
+            }
+        }
 
     img {
         width: 100%;
         max-width: 600px;
         padding: 3.5rem;
     }
+
     .card-info{
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 3rem 0;
 
-        
-
-        @include media-md {
-            align-items: flex-start;
-            text-align: start;
-            padding: 3rem;    
-
-            
-        }
+            @include media-md {
+                align-items: flex-start;
+                text-align: start;
+                padding: 3rem; 
+            }
     }
 
     h2 {
-        
         color: variables.$Very-Dark-Cyan;
 
-        @include media-md {
-            margin-bottom: 1rem;
-        }
+            @include media-md {
+                margin-bottom: 1rem;
+            }
     }
     
     p {
@@ -67,10 +60,9 @@ main {
         line-height: 1.5;
         padding: 0rem 2rem 3rem;
 
-        @include media-md {
-            padding: 0;
-        }
-       
+            @include media-md {
+                padding: 0;
+            }
     }
 
     &:last-child {
