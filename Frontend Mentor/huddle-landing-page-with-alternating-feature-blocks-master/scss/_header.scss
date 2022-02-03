@@ -16,17 +16,25 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 1rem 0;
+            padding: 2.5rem 1rem 0;
             margin-bottom: 70px;
 
                 @include media-lg {
                     @include contain-resonsive;
+                    padding: 2.5rem 0 0;
                 }
             
 
                 img {
                     width: 125px;
                     height: 20px; 
+
+                     @include media-lg {
+                       
+                        width: 160px;
+                        height: 30px; 
+
+                     }
                 }
                 
                 a {
@@ -34,10 +42,14 @@ header {
                     background: variables.$white;
                     color: variables.$Very-Dark-Cyan;
                     font-weight: bold;
-                    padding: .4rem 1.7rem;
+                    padding: .4em 1.7em;
                     border-radius: 100px;
                     box-shadow: rgba(0, 0, 0, 0.10) 1px 2px 10px;
                     transition: all 150ms ease-in-out;
+
+                    @include media-lg {
+                        font-size: 1.1rem;
+                    }
 
 
                     &:hover {
@@ -57,6 +69,7 @@ header {
         @include media-lg  {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             gap: 4rem;
             text-align: start;
             @include contain-resonsive;
@@ -67,7 +80,7 @@ header {
         color: variables.$Very-Dark-Cyan;
 
         @include media-lg {
-            margin-bottom: 0;
+            margin-bottom: 1.5rem;
             max-width: 500px;
         }
     }
