@@ -1,0 +1,22 @@
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: var(--font-secondary);
+    background: var(--color-primary);
+    font-weight: 400;
+    color: var(--white)
+}
+
+.container {
+    @include contain;
+}

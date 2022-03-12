@@ -6,9 +6,46 @@
   --gradient-primary: hsl(176, 68%, 64%);
   --gradient-seconday: hsl(198, 60%, 50%);
   --light-error: hsl(0, 100%, 63%);
-  --White: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
   --font-primary: "Raleway", sans-serif;
   --font-secondary:"Open Sans", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: var(--font-secondary);
+  background: var(--color-primary);
+  font-weight: 400;
+  color: var(--white);
+}
+
+.container {
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.7rem;
+}
+.header-logo {
+  width: 7.5rem;
+}
+.header .nav-links {
+  display: flex;
+  gap: 2rem;
+  font-family: var(--font-primary);
+}
+.header .nav-links-item {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

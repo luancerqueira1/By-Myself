@@ -1,0 +1,22 @@
+@use 'variables' as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     margin-top: 1.7rem;
+
+    &-logo {
+        width: 7.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        font-family: var(--font-primary);
+        
+        &-item {
+            text-decoration: none;
+        }
+    }
+}
