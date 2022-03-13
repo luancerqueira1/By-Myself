@@ -3,3 +3,7 @@
     max-width: 90%;
     margin-inline: auto;
 }
+
+@mixin transition {
+    transition:  opacity 150ms ease-in-out;
+}

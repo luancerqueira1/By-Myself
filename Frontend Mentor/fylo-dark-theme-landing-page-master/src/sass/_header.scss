@@ -1,22 +1,53 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-     margin-top: 1.7rem;
+    margin-top: 1.7rem;
 
     &-logo {
-        width: 7.5rem;
+        width: 6rem;
     }
 
     .nav-links {
         display: flex;
         gap: 2rem;
-        font-family: var(--font-primary);
         
         &-item {
-            text-decoration: none;
+            color: var(--white);
+            @include transition;
+
+            &:hover {
+                opacity: .7;
+            }
         }
     }
 }
+
+.header-section {
+    background: url(/src/images/bg-curvy-mobile.svg) no-repeat bottom;
+    background-size: 150% 50%;
+    margin-top: 3rem;
+
+    &-content {
+        text-align: center;
+        
+
+       
+
+        h1 {
+            font-size: 1.5rem;
+          
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+
+
+

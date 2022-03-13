@@ -17,6 +17,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-size: 14px;
   font-family: var(--font-secondary);
@@ -25,9 +29,29 @@ body {
   color: var(--white);
 }
 
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: var(--font-primary);
+}
+
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 90%;
   margin-inline: auto;
+}
+
+.btn {
+  display: inline-flex;
+  padding: 1rem 5rem;
+  border-radius: 100px;
+  font-family: var(--color-primary);
+  font-weight: 700;
 }
 
 .header {
@@ -37,15 +61,33 @@ body {
   margin-top: 1.7rem;
 }
 .header-logo {
-  width: 7.5rem;
+  width: 6rem;
 }
 .header .nav-links {
   display: flex;
   gap: 2rem;
-  font-family: var(--font-primary);
 }
 .header .nav-links-item {
-  text-decoration: none;
+  color: var(--white);
+  transition: opacity 150ms ease-in-out;
+}
+.header .nav-links-item:hover {
+  opacity: 0.7;
+}
+
+.header-section {
+  background: url(/src/images/bg-curvy-mobile.svg) no-repeat bottom;
+  background-size: 150% 50%;
+  margin-top: 3rem;
+}
+.header-section-content {
+  text-align: center;
+}
+.header-section-content h1 {
+  font-size: 1.5rem;
+}
+.header-section-content p {
+  margin-bottom: 2rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
