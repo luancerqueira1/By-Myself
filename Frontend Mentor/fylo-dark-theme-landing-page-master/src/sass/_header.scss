@@ -29,24 +29,43 @@
 .header-section {
     background: url(/src/images/bg-curvy-mobile.svg) no-repeat bottom;
     background-size: 150% 50%;
-    margin-top: 3rem;
+    padding: 3rem 0 4rem;
 
     &-content {
         text-align: center;
-        
-
        
 
         h1 {
             font-size: 1.5rem;
-          
+            margin: 2rem 0 1rem;
         }
 
         p {
-            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right,var(--gradient-primary), var(--gradient-seconday));  
+            color: var(--white);
+            @include transition;
+           
+            
+            &:hover {
+                opacity: .8;
+                transform: scale(1.04);
+
+            }
         }
     }
+
+    &-info {
+        max-width: 31.25rem;
+        margin-inline: auto;
+    }
 }
+
+
+
 
 
 

@@ -69,7 +69,8 @@ img {
 }
 .header .nav-links-item {
   color: var(--white);
-  transition: opacity 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+  transition-property: opacity scale;
 }
 .header .nav-links-item:hover {
   opacity: 0.7;
@@ -78,16 +79,36 @@ img {
 .header-section {
   background: url(/src/images/bg-curvy-mobile.svg) no-repeat bottom;
   background-size: 150% 50%;
-  margin-top: 3rem;
+  padding: 3rem 0 4rem;
 }
 .header-section-content {
   text-align: center;
 }
 .header-section-content h1 {
   font-size: 1.5rem;
+  margin: 2rem 0 1rem;
 }
 .header-section-content p {
-  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+.header-section-content .btn-primary {
+  background: linear-gradient(to right, var(--gradient-primary), var(--gradient-seconday));
+  color: var(--white);
+  transition: 150ms ease-in-out;
+  transition-property: opacity scale;
+}
+.header-section-content .btn-primary:hover {
+  opacity: 0.8;
+  transform: scale(1.04);
+}
+.header-section-info {
+  max-width: 31.25rem;
+  margin-inline: auto;
+}
+
+.main {
+  background: var(--color-secondary);
+  padding: 3rem 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
