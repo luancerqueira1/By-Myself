@@ -40,7 +40,18 @@ img {
 .btn {
     display: inline-flex;
     padding: 1rem 5rem;
-    border-radius: 100px;
+    border-radius: 5rem;
     font-family: var(--color-primary);
     font-weight: 700;
+}
+
+.btn-primary {
+    background: linear-gradient(to right,var(--gradient-primary), var(--gradient-seconday));  
+    color: var(--white);
+    @include transition;
+    
+    &:hover {
+        opacity: .8;
+        transform: scale(1.04);
+    }
 }

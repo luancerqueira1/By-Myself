@@ -45,18 +45,6 @@
             padding-bottom: 2rem;
         }
 
-        .btn-primary {
-            background: linear-gradient(to right,var(--gradient-primary), var(--gradient-seconday));  
-            color: var(--white);
-            @include transition;
-           
-            
-            &:hover {
-                opacity: .8;
-                transform: scale(1.04);
-
-            }
-        }
     }
 
     &-info {
