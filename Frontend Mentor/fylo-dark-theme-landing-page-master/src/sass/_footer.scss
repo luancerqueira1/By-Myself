@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 
 .footer {
@@ -70,7 +71,9 @@
 
 
     .attribution {
-        margin-top: 10rem;
+        padding: 3rem 0;
+        text-align: center;
+        font-family: var(--font-primary);
     }
 }
 
@@ -99,19 +102,33 @@
    }
 
    .footer-info-socials {
+       
+       display: flex;
        justify-self: center;
-       flex-direction: column;
+       
+      
 
        li {
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           width: 2.5rem;
-           height: 2.5rem;
-           font-size: 1.3rem;
-           
-           border: 2px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1.1rem;
+            margin-right: 1rem;
+            border: 1px solid var(--white);
             border-radius: 50%;
+            @include transition;
+
+            &:hover {
+                color: var(--gradient-seconday);
+                background: linear-gradient(to right,var(--gradient-primary), var(--gradient-seconday));
+                opacity: 1;
+                transform: scale(1.1);
+                
+            }
        }
+
+       
    }
 }
