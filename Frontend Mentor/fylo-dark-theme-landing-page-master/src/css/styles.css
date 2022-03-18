@@ -90,6 +90,7 @@ img {
   background: url(/src/images/bg-curvy-mobile.svg) no-repeat bottom;
   background-size: 150% 50%;
   padding: 3rem 0 4rem;
+  transform: translateY(1px);
 }
 .header-section-content {
   text-align: center;
@@ -97,6 +98,7 @@ img {
 .header-section-content h1 {
   font-size: 1.5rem;
   margin: 2rem 0 1rem;
+  letter-spacing: 1px;
 }
 .header-section-content p {
   padding-bottom: 2rem;
@@ -106,9 +108,30 @@ img {
   margin-inline: auto;
 }
 
+@media (min-width: 1024px) {
+  .header {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+
+  .header-section {
+    background: url(/src/images/bg-curvy-desktop.svg) no-repeat bottom;
+    padding-bottom: 10rem;
+  }
+  .header-section-content {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1200px) {
+  .header-section {
+    background-size: 100% 40%;
+    padding-bottom: 10rem;
+  }
+}
 .main {
   background: var(--color-secondary);
-  padding: 7rem 0;
+  padding: 3rem 0 10rem;
 }
 .main .benefit-cards {
   display: grid;
@@ -119,6 +142,8 @@ img {
 }
 .main .benefit-card {
   text-align: center;
+  max-width: 90%;
+  margin-inline: auto;
 }
 .main .benefit-card .benefit-card-info {
   max-width: 24.5rem;
@@ -133,6 +158,9 @@ img {
 .main .stay-productive {
   display: grid;
   row-gap: 3rem;
+}
+.main .stay-productive .stay-productive-img {
+  justify-self: center;
 }
 .main .stay-productive h2 {
   margin-bottom: 1.2rem;
@@ -167,6 +195,15 @@ img {
   transform: scale(0.2);
 }
 
+@media (min-width: 768px) {
+  .main {
+    padding-top: 0;
+  }
+  .main .benefit-cards {
+    padding-top: 0;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
 .testimonials {
   background: var(--color-secondary);
   display: grid;

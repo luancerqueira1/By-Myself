@@ -3,7 +3,7 @@
 
 .main {
     background: var(--color-secondary);
-    padding: 7rem 0;
+    padding: 3rem 0 10rem;
 
     .benefit-cards {
         display: grid;
@@ -15,6 +15,7 @@
 
     .benefit-card {
         text-align: center;
+        @include contain;
 
         .benefit-card-info {
             max-width: 24.5rem;
@@ -34,6 +35,10 @@
     .stay-productive {
         display: grid;
         row-gap: 3rem;
+       
+        .stay-productive-img{
+           justify-self: center;
+        }
 
         h2 {
             margin-bottom: 1.2rem;
@@ -74,3 +79,17 @@
        
     }
  }
+
+
+ //Media Queries
+ @media (min-width: $breakpoint-sm) {
+    .main{
+        padding-top: 0;
+
+        .benefit-cards {
+            padding-top: 0;
+            grid-template-columns: repeat(auto-fit, minmax(400px,1fr)) ;
+        }
+    }
+ }
+

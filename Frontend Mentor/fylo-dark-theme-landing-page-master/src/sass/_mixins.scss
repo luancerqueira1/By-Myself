@@ -4,6 +4,11 @@
     margin-inline: auto;
 }
 
+@mixin contain-desktop {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+
 @mixin transition {
     transition:  200ms ease-in-out;
     transition-property: opacity  scale background-color ;

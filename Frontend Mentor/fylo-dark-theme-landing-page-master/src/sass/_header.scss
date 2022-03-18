@@ -7,7 +7,6 @@
     justify-content: space-between;
     margin-top: 1.7rem;
     
-
     &-logo {
         width: 6rem;
     }
@@ -31,6 +30,7 @@
     background: url(/src/images/bg-curvy-mobile.svg) no-repeat bottom;
     background-size: 150% 50%;
     padding: 3rem 0 4rem;
+    transform: translateY(1px);
 
     &-content {
         text-align: center;
@@ -39,10 +39,12 @@
         h1 {
             font-size: 1.5rem;
             margin: 2rem 0 1rem;
+            letter-spacing: 1px;
         }
 
         p {
             padding-bottom: 2rem;
+            
         }
 
     }
@@ -52,6 +54,37 @@
         margin-inline: auto;
     }
 }
+
+
+
+// Responsive 
+
+@media (min-width: $breakpoint-md) {
+    .header {
+        @include contain-desktop;    
+    }
+
+     .header-section {
+        background: url(/src/images/bg-curvy-desktop.svg) no-repeat bottom;
+        padding-bottom: 10rem;  
+        
+        &-content {
+          @include contain-desktop; 
+        }
+    }  
+}
+
+@media (min-width: $breakpoint-lg) {
+     .header-section {
+         background-size:100% 40%;
+         padding-bottom: 10rem;
+     }
+}
+
+
+
+
+
 
 
 
