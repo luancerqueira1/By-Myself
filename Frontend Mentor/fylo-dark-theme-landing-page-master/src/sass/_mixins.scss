@@ -11,5 +11,5 @@
 
 @mixin transition {
     transition:  200ms ease-in-out;
-    transition-property: opacity  scale background-color ;
+    transition-property: opacity  scale;
 }

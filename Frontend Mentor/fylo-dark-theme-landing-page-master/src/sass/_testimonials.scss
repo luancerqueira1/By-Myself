@@ -1,15 +1,14 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .testimonials {
     background: var(--color-secondary);
-    display: grid;
-    row-gap: 3rem;
-    column-gap: 3rem;
     padding-bottom: 20rem;
 
      .testimonials-grid {
         display: grid;
         gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
     }
 
     .testimonial {
@@ -51,6 +50,9 @@
         margin-right: 1rem;
     }
 }
+
+
+
 
 
 

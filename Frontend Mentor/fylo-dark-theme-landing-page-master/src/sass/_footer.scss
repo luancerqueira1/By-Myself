@@ -11,6 +11,7 @@
         position: absolute;
         top: -10rem;
         width: 90%;
+        max-width: 60rem;
         left: 50%;
         transform: translateX(-50%);
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -32,7 +33,6 @@
 
         input {
             width: 100%;
-            max-width: 28.5rem;
             height: 3rem;
             padding: .5rem 2rem;
             border: none;
@@ -45,12 +45,10 @@
         }
 
         button {
-            
             width: 100%;
-            max-width: 28.5rem;
-            height: 3.5rem;
             border-radius: 5rem;
             align-items: center;
+            justify-content: center;
             border: none;
             margin-bottom: 1.5rem;
         }
@@ -144,3 +142,31 @@
        }
    }
 }
+// Responsive 
+
+@media (min-width: $breakpoint-sm) {
+    .footer {
+       
+        .footer-float form {
+            display: grid;
+            grid-template-columns:  1fr auto;
+          
+            gap: 2rem;
+
+            input {
+                
+                margin: 0;
+            }
+
+            button {
+                padding: 1rem 1.3rem;
+                margin: 0;
+            }
+        }
+    }   
+}
+
+
+
+
+

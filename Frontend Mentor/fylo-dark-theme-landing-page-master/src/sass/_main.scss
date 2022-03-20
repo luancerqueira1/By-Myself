@@ -7,10 +7,10 @@
 
     .benefit-cards {
         display: grid;
-        row-gap: 3rem;
-        max-width: 1100px;
+        gap: 1rem;
+        max-width: 60rem;
         margin-inline: auto;
-        margin-bottom: 8rem;
+        margin-bottom: 6rem;
     }
 
     .benefit-card {
@@ -29,12 +29,11 @@
         p {
             margin-bottom: 3rem;
         }
-        
     }
     
     .stay-productive {
         display: grid;
-        row-gap: 3rem;
+        gap: 3rem;
        
         .stay-productive-img{
            justify-self: center;
@@ -47,6 +46,11 @@
         p {
             margin-bottom: 1rem;
         }
+
+        .stay-productive-info {
+            max-width: 33rem;
+        }
+
     }
 }
 
@@ -87,9 +91,28 @@
         padding-top: 0;
 
         .benefit-cards {
-            padding-top: 0;
-            grid-template-columns: repeat(auto-fit, minmax(400px,1fr)) ;
+            grid-template-columns: repeat(auto-fit, minmax(450px,1fr)) ;
         }
     }
  }
+
+ @media (min-width: $breakpoint-md) {
+     .main {
+        .stay-productive {
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            gap: 1;
+
+            .stay-productive-info {
+                justify-self: center;
+            }
+        
+            .stay-productive-img{
+                justify-self: flex-end;
+              
+            } 
+        }
+    }
+}
+
 
