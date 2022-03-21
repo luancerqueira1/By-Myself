@@ -417,6 +417,7 @@ img {
   }
   .footer .attribution {
     display: flex;
+    gap: 1rem;
     text-align: center;
     justify-content: center;
   }
