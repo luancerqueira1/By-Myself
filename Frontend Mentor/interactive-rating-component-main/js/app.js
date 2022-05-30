@@ -14,11 +14,10 @@ function getRate() {
 		rate.addEventListener('click', () => {
 			const rateValue = rate.getAttribute('data-value');
 
-			if (rateValue) {
-				rate.style.background = " hsl(25, 97%, 53%)";
-        		rate.style.color = "white";
-			}
+			rate.style.background = " hsl(25, 97%, 53%)";
+			rate.style.color = "white";
 			
+				
 			console.log(rateValue);
 
 			
@@ -30,6 +29,7 @@ function getRate() {
 			cardRated.style.display = "block";
 			});
 		});
+
 	});
 }
 
