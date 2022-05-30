@@ -95,6 +95,10 @@ body {
   color: var(--orange);
 }
 
+.card.card-rated {
+  display: none;
+}
+
 /*======= CARD RATED =======*/
 .card-rated {
   background-color: var(--Dark-Blue);
@@ -102,6 +106,7 @@ body {
   border-radius: 1.5rem;
   padding: 1.5rem;
   text-align: center;
+  display: none;
 }
 .card-rated .img-container {
   display: grid;
