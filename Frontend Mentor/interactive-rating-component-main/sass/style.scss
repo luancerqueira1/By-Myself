@@ -55,9 +55,13 @@ body {
 
 /*HIDE THE CHECKBOX*/
 .ratings{
-	// display: none;
+	display: none;
 }
 
+.porra {
+	background-color: var(--orange);
+	color: #fff;
+}
 
 .rate .rating {
 	cursor: pointer;

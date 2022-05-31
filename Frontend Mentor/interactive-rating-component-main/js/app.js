@@ -2,44 +2,61 @@
 
 const rateEl = document.querySelectorAll(".ratings");
 
-const btn = document.querySelector('#btn');
+const submitBtn = document.querySelector("#Submit-btn");
 const card = document.querySelector('.card');
 const cardRated = document.querySelector(".card-rated");
-const porran = document.querySelectorAll(".rating").checked;
+const ratingPicked = document.querySelectorAll(".rating");
 
 
 
 getRate();
 
+
+
+
+
 function getRate() {
+	
 	rateEl.forEach((rate) => {
+
+		botaCor();
 		rate.addEventListener('click', () => {
 			const rateValue = rate.value;
-
+			let getValuerate = rateValue;
 			
 
+			console.log(rateValue,getValuerate);
 			
-				porran.style.backgroundColor = "red";
-       		porran.style.color = "white";
-			
-				
-			
-			
-			
-				
-			console.log(rateValue);
-
-			
-			btn.addEventListener("click", (e) => {
-			e.preventDefault();
-
-			card.classList.add("card-rated");
-
-			cardRated.style.display = "block";
-			});
+		
 		});
 
 	});
+}
+console.log(getValuerate);
+
+
+submitBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+
+	card.classList.add("card-rated");
+
+	cardRated.style.display = "block";
+	
+
+});
+
+
+
+function botaCor() {
+  ratingPicked.forEach((butao) => {
+	  butao.addEventListener("click", () => {
+			butao.style.backgroundColor = "hsl(25, 97%, 53%)";
+     		butao.style.color = "white";
+		  
+		
+     
+    });
+  });
 }
 
 
