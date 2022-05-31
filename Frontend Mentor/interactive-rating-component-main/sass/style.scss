@@ -53,8 +53,13 @@ body {
 	}
 }
 
+/*HIDE THE CHECKBOX*/
+.ratings{
+	// display: none;
+}
 
-.rate li {
+
+.rate .rating {
 	cursor: pointer;
 	display: grid;
 	color: var(--Light-Grey);
@@ -69,7 +74,7 @@ body {
 	transition: background 300ms ease-in-out;
 }
 
-.rate li:hover {
+.rate .rating:hover {
 	background-color: var(--Light-Grey);
 	color: var(--white);
 }
