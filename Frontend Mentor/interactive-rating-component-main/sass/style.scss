@@ -58,11 +58,6 @@ body {
 	display: none;
 }
 
-.porra {
-	background-color: var(--orange);
-	color: #fff;
-}
-
 .rate .rating {
 	cursor: pointer;
 	display: grid;
@@ -77,6 +72,8 @@ body {
 	border-radius: 50%;
 	transition: background 300ms ease-in-out;
 }
+
+
 
 .rate .rating:hover {
 	background-color: var(--Light-Grey);
