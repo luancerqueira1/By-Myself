@@ -10,3 +10,21 @@ body {
    font-size: $font-size;
    font-family: $font-primary;
 }
+
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+img{
+   max-width: 100%;
+}
+.container {
+   width: 90%;
+   max-width: 1440px;
+   margin: 0 auto;
+   // border: 2px solid red;
+}
