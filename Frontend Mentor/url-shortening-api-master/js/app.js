@@ -20,3 +20,14 @@ const apiResponse = async (URL) => {
 };
 
 apiResponse(url);
+
+
+
+const nav = document.querySelector('.nav-links');
+const navBtn = document.querySelector('.menu-btn');
+
+navBtn.addEventListener('click', function () {
+   nav.classList.toggle('active')
+});
+
+
