@@ -1,0 +1,66 @@
+@use 'variables' as *;
+
+footer {
+   padding: 3rem 0;
+   background-color: $very-dark-violet;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+
+   .logo {
+      margin-bottom: 3rem;
+
+      img {
+         filter: brightness(0) invert(1);
+      }
+   }
+
+   .footer-nav-links {
+
+      .footer-links {
+         margin-bottom: 2rem;
+
+         h3 {
+            color: white;
+            margin-bottom: 1rem;
+         }
+
+         a {
+            color: $grayish-violet;
+
+            &:hover {
+               color: $cyan;
+            }
+         }
+
+      }
+
+      .footer-links {
+         display: grid;
+         gap: 2rem;
+
+         li {
+            margin-bottom: .4rem;
+
+            &:hover {
+               color: red;
+            }
+         }
+      }
+
+      .footer-social {
+         display: flex;
+         gap: 1rem;
+
+         svg {
+            fill: white;
+            
+            &:hover{
+               fill: $cyan;
+            }
+         }
+      }
+   }
+}
