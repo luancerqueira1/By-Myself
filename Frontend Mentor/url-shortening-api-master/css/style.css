@@ -102,7 +102,7 @@ nav {
 }
 
 header {
-  margin-bottom: 5rem;
+  margin-bottom: 9rem;
   overflow: hidden;
 }
 header .banner {
@@ -131,4 +131,162 @@ header .banner-info a {
   color: white;
   padding: 0.7em 3em;
   border-radius: 5rem;
+}
+
+main {
+  background-color: hsl(225deg, 33%, 95%);
+  padding-top: 9rem;
+  position: relative;
+}
+main .shorten-container {
+  background: hsl(257deg, 27%, 26%);
+  background-image: url(/images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -5rem;
+  width: 90%;
+}
+main form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+main input,
+main button {
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+main button {
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+main button:hover {
+  background-color: #51dbdb;
+}
+main .error {
+  position: absolute;
+  top: 3.3rem;
+  color: hsl(0deg, 87%, 67%);
+  font-style: italic;
+  display: none;
+  font-size: 16px;
+}
+main .show-error {
+  display: block;
+}
+main .short-result {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: hsl(260deg, 8%, 14%);
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+main .short-result a {
+  color: hsl(180deg, 66%, 49%);
+}
+main .short-result .copy-btn {
+  width: 100%;
+}
+main .short-result .copied.copy-btn {
+  background-color: hsl(257deg, 27%, 26%);
+}
+main .short-result .copied.copy-btn:hover {
+  background-color: #514375;
+}
+main .product-info .product-title {
+  text-align: center;
+  margin: 6rem 0;
+}
+main .product-info .product-title h2 {
+  margin-bottom: 1rem;
+}
+main .product-info .product-title p {
+  color: hsl(257deg, 7%, 63%);
+}
+main .product-info .services-container {
+  position: relative;
+  z-index: 1;
+}
+main .product-info .services-container .product-services {
+  position: relative;
+  padding: 5rem 2rem 3rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  z-index: 3;
+}
+main .product-info .services-container .product-services .img-container {
+  position: absolute;
+  top: -2rem;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: hsl(257deg, 27%, 26%);
+}
+main .product-info .services-container .product-services h2 {
+  color: hsl(257deg, 27%, 26%);
+}
+main .product-info .services-container .product-services p {
+  color: hsl(257deg, 7%, 63%);
+}
+main .product-info .services-container:before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  right: 50%;
+  width: 0.4rem;
+  height: 100%;
+  background-color: hsl(180deg, 66%, 49%);
+  transform: translate(-50%);
+  z-index: -1;
+}
+main .product-get-started {
+  height: 20rem;
+  background-color: hsl(257deg, 27%, 26%);
+  background-image: url(/images/bg-boost-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .product-get-started h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+main .product-get-started a {
+  display: inline-block;
+  background-color: hsl(180deg, 66%, 49%);
+  color: white;
+  font-weight: 700;
+  padding: 0.7em 2em;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+main .product-get-started a:hover {
+  background-color: #51dbdb;
 }/*# sourceMappingURL=style.css.map */
