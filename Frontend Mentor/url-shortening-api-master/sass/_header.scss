@@ -1,0 +1,37 @@
+@use 'variables' as *;
+
+header {
+   margin-bottom: 5rem;
+   overflow: hidden;
+
+   .banner {
+      margin-bottom: 2rem;
+
+      img {
+         max-width:500px;
+         transform: translateX(1rem);
+      }
+   }
+
+   .banner-info{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      align-items: center;
+      text-align: center;
+
+      h1 {
+         color: $very-dark-violet;
+      }
+      p {
+         color: $grayish-violet;
+      }
+      a {
+         background-color: $cyan;
+         color: white;
+         padding: .7em 3em;
+         border-radius: 5rem;
+      }
+   }
+}

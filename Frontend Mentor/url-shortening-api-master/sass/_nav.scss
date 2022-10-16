@@ -41,6 +41,7 @@ nav {
    visibility: hidden;
    opacity: 0;
    transform: translateY(-100%);
+   z-index: 99;
 
    .bar {
       width: 100%;
