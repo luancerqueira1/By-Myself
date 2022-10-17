@@ -382,7 +382,7 @@ main .product-info .services-container:before {
   z-index: -1;
 }
 main .product-get-started {
-  height: 20rem;
+  height: 18rem;
   background-color: hsl(257deg, 27%, 26%);
   background-image: url(/images/bg-boost-mobile.svg);
   background-repeat: no-repeat;
@@ -426,6 +426,9 @@ main .product-get-started a:hover {
   }
   main .short-container .short-results {
     grid-template-columns: 1fr 1fr;
+  }
+  main .product-get-started {
+    background-image: url(/images/bg-boost-desktop.svg);
   }
 }
 @media (min-width: 1024px) {

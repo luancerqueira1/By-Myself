@@ -178,7 +178,7 @@ main {
    }
 
    .product-get-started {
-      height: 20rem;
+      height: 18rem;
       background-color: $dark-violet;
       background-image: url(/images/bg-boost-mobile.svg);
       background-repeat: no-repeat;
@@ -231,6 +231,10 @@ main {
          .short-results {
             grid-template-columns: 1fr 1fr;
          }
+      }
+
+      .product-get-started{
+         background-image: url(/images/bg-boost-desktop.svg);
       }
    }
 }
