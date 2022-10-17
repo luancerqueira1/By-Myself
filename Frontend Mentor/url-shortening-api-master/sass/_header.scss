@@ -67,7 +67,6 @@ header {
       .header-container {
          display: flex;
          gap: 2.5rem;
-         overflow: hidden;
          .banner {
             transform: translateX(8rem);
             order: 1;
@@ -80,7 +79,7 @@ header {
          text-align: start;
 
          h1 {
-            font-size: 3rem;
+            font-size: 4rem;
          }
 
          p {
@@ -102,7 +101,7 @@ header {
             order: 1;
 
             img {
-               max-width: 600px;
+               max-width: 700px;
             }
          }
       }

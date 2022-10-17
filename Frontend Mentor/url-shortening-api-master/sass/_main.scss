@@ -2,91 +2,109 @@
 
 main {
    background-color: $light-gray;
-   padding-top: 9rem;
+   padding-top: 10rem;
    position: relative;
 
-   .shorten-container {
-      background: $dark-violet;
-      background-image: url(/images/bg-shorten-mobile.svg);
-      background-repeat: no-repeat;
-      background-position: top right;
-      padding: 1.5rem;
-      border-radius: .5rem;
-      margin-bottom: 2rem;
-      position: absolute;
+   .short-container {
       margin: 0 auto;
-      left: 0;
-      right: 0;
-      top: -5rem;
-      width: 90%;
-   }
 
-   form {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-   }
+      .form-container {
+         background: $dark-violet;
+         background-image: url(/images/bg-shorten-mobile.svg);
+         background-repeat: no-repeat;
+         background-position: top right;
+         padding: 2rem;
+         border-radius: .5rem;
+         margin-bottom: 2rem;
+         position: absolute;
+         margin: 0 1rem;
+         left: 0;
+         right: 0;
+         top: -5rem;
+         display: grid;
+         gap: 2rem;
+         margin: 0 auto;
 
-   input,
-   button {
-      padding: .7rem 2rem;
-      border-radius: .5rem;
-      border: none;
-      font-family: $font-primary;
-      font-size: $font-size;
-   }
+         input {
+            padding: 1rem;
+         }
 
-   button {
-      background-color: $cyan;
-      color: white;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
+         input.error-input {
+            border: 2px solid $red;
+         }
 
-      &:hover {
-         background-color: lighten($cyan, 10%);
-      }
-   }
+         .error {
+            position: absolute;
+            top: 6rem;
+            left: 2rem;
+            color: $red;
+            font-style: italic;
+            display: none;
+            font-size: 16px;
+            display: none;
+         }
 
-   .error {
-      position: absolute;
-      top: 3.3rem;
-      color: $red;
-      font-style: italic;
-      display: none;
-      font-size: 16px;
-   }
-
-   .show-error {
-      display: block;
-   }
-
-   .short-result {
-      background-color: white;
-      padding: 1rem;
-      border-radius: .5rem;
-      color: $very-dark-violet;
-      display: grid;
-      gap: 1rem;
-      margin-bottom: 2rem;
-
-      a {
-         color: $cyan;
+         .show-error {
+            display: block;
+         }
       }
 
-      .copy-btn {
-         width: 100%;
+      input,
+      button {
+         padding: .7rem 0;
+         border-radius: .5rem;
+         border: none;
+         font-family: $font-primary;
+         font-size: $font-size;
       }
 
-      .copied.copy-btn {
-         background-color: $dark-violet;
+      button {
+         background-color: $cyan;
+         color: white;
+         border: none;
+         font-weight: 700;
+         cursor: pointer;
 
-
+         &:hover {
+            background-color: lighten($cyan, 10%);
+         }
       }
 
-      .copied.copy-btn:hover {
-         background-color: lighten($dark-violet, 10%);
+      .short-results {
+         display: grid;
+         gap: 2rem;
+
+         .short-result {
+            background-color: white;
+            padding: 1rem;
+            border-radius: .5rem;
+            color: $very-dark-violet;
+            display: grid;
+            gap: 1rem;
+
+            a {
+               color: $cyan;
+            }
+
+            .result-copy {
+               display: grid;
+
+
+               .copy-btn {
+                  margin-top: 1rem;
+               }
+
+               .copied.copy-btn {
+                  background-color: $dark-violet;
+               }
+
+               .copied.copy-btn:hover {
+                  background-color: lighten($dark-violet, 10%);
+               }
+            }
+
+
+         }
       }
    }
 
@@ -94,7 +112,8 @@ main {
 
       .product-title {
          text-align: center;
-         margin: 6rem 0;
+         max-width: 35rem;
+         margin: 6rem auto;
 
          h2 {
             margin-bottom: 1rem;
@@ -120,7 +139,7 @@ main {
 
             .img-container {
                position: absolute;
-               top: -2rem;
+               top: -2.5rem;
                right: 50%;
                left: 50%;
                transform: translate(-50%);
@@ -135,6 +154,7 @@ main {
 
             h2 {
                color: $dark-violet;
+               margin-bottom: 1rem;
             }
 
             p {
@@ -154,7 +174,6 @@ main {
          background-color: $cyan;
          transform: translate(-50%);
          z-index: -1;
-
       }
    }
 
@@ -185,6 +204,103 @@ main {
 
          &:hover {
             background-color: lighten($cyan, 10%);
+         }
+      }
+   }
+}
+
+/*===== RESPONSIVE =====*/
+@media (min-width:$breakpoint-sm) {
+   main {
+      padding-top: 6rem;
+
+      .short-container {
+
+         .form-container {
+            background-image: url(/images/bg-shorten-desktop.svg);
+            display: grid;
+            padding: 3rem;
+            grid-template-columns: 3fr 1fr;
+
+            .error {
+               top: 7rem;
+               left: 3rem;
+            }
+         }
+
+         .short-results {
+            grid-template-columns: 1fr 1fr;
+         }
+      }
+   }
+}
+
+@media (min-width:$breakpoint-md) {
+   main {
+
+      .short-container {
+
+         .short-results {
+            grid-template-columns: 1fr;
+
+            .short-result {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+
+               hr {
+                  display: none;
+               }
+
+               button {
+                  width: 2rem;
+               }
+
+               .result-copy {
+                  display: flex;
+                  gap: 3rem;
+                  align-items: center;
+
+                  .copy-btn {
+                     width: 7rem;
+                     margin-top: 0;
+                  }
+
+               }
+            }
+         }
+      }
+   }
+}
+
+@media (min-width:$breakpoint-lg) {
+   main {
+      .product-info {
+
+         .services-container {
+            display: flex;
+            gap: 3rem;
+
+            .product-services {
+
+               .img-container {
+                  left: 5rem;
+               }
+            }
+
+            article:nth-child(1) {
+               transform: translateY(-3rem);
+            }
+
+            article:nth-child(3) {
+               transform: translateY(3rem);
+            }
+         }
+
+         .services-container:before {
+            top: 8rem;
+            width: 100%;
+            height: .4rem;
          }
       }
    }

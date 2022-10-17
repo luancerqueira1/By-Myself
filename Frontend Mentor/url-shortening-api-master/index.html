@@ -59,12 +59,10 @@
   <main>
     <div class="container">
       <div class="short-container">
-        <div class="shorten-container">
-          <form>
-            <input type="text" placeholder="  Shorten a link here...">
-            <span class="error show-error">Please add a link</span>
-            <button type="submit">Shorten It!</button>
-          </form>
+        <div class="form-container container ">
+          <input class="error-input" type="text" placeholder="  Shorten a link here...">
+          <button type="submit">Shorten It!</button>
+          <span class="error show-error">Please add a link</span>
         </div>
         <div class="short-results">
           <div class="short-result">
@@ -72,33 +70,40 @@
               <p>https://www.frontendmentor.io</p>
             </div>
             <hr>
-            <div class="link-shortened">
-              <a href="https://www.frontendmentor.io" target="_blank">https://www.frontendmentor.io</a>
+            <div class="result-copy">
+              <div class="link-shortened">
+                <a href="https://www.frontendmentor.io" target="_blank">https://www.frontendmentor.io</a>
+              </div>
+              <button class="copy-btn">Copy</button>
             </div>
-            <button class="copy-btn">Copy</button>
           </div>
           <div class="short-result">
             <div class="link-to-shorten">
               <p>https://www.frontendmentor.io</p>
             </div>
             <hr>
-            <div class="link-shortened">
-              <a href="https://www.frontendmentor.io" target="_blank">https://www.frontendmentor.io</a>
+            <div class="result-copy">
+              <div class="link-shortened">
+                <a href="https://www.frontendmentor.io" target="_blank">https://www.frontendmentor.io</a>
+              </div>
+              <button class="copy-btn copied">Copied!</button>
             </div>
-            <button class="copy-btn copied">Copied!</button>
           </div>
           <div class="short-result">
             <div class="link-to-shorten">
               <p>https://www.frontendmentor.io</p>
             </div>
             <hr>
-            <div class="link-shortened">
-              <a href="https://www.frontendmentor.io" target="_blank">https://www.frontendmentor.io</a>
+            <div class="result-copy">
+              <div class="link-shortened">
+                <a href="https://www.frontendmentor.io" target="_blank">https://www.frontendmentor.io</a>
+              </div>
+              <button class="copy-btn">Copy</button>
             </div>
-            <button class="copy-btn">Copy</button>
           </div>
         </div>
       </div>
+      
       <section class="product-info">
         <div class="product-title">
           <h2>Advanced Statistics</h2>
@@ -114,6 +119,7 @@
             <p>Boost your brand recognition with each click. Generic links don’t
               mean a thing. Branded links help instil confidence in your content.</p>
           </article>
+          
           <article class="product-services">
             <div class="img-container">
               <img src="images/icon-detailed-records.svg" alt="">

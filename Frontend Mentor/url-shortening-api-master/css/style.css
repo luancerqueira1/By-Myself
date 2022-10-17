@@ -207,7 +207,6 @@ header .banner-info a:hover {
   header .header-container {
     display: flex;
     gap: 2.5rem;
-    overflow: hidden;
   }
   header .header-container .banner {
     transform: translateX(8rem);
@@ -218,7 +217,7 @@ header .banner-info a:hover {
     text-align: start;
   }
   header .banner-info h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   header .banner-info p {
     font-size: 20px;
@@ -234,88 +233,102 @@ header .banner-info a:hover {
     order: 1;
   }
   header .header-container .banner img {
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 main {
   background-color: hsl(225deg, 33%, 95%);
-  padding-top: 9rem;
+  padding-top: 10rem;
   position: relative;
 }
-main .shorten-container {
+main .short-container {
+  margin: 0 auto;
+}
+main .short-container .form-container {
   background: hsl(257deg, 27%, 26%);
   background-image: url(/images/bg-shorten-mobile.svg);
   background-repeat: no-repeat;
   background-position: top right;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   margin-bottom: 2rem;
   position: absolute;
-  margin: 0 auto;
+  margin: 0 1rem;
   left: 0;
   right: 0;
   top: -5rem;
-  width: 90%;
+  display: grid;
+  gap: 2rem;
+  margin: 0 auto;
 }
-main form {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+main .short-container .form-container input {
+  padding: 1rem;
 }
-main input,
-main button {
-  padding: 0.7rem 2rem;
+main .short-container .form-container input.error-input {
+  border: 2px solid hsl(0deg, 87%, 67%);
+}
+main .short-container .form-container .error {
+  position: absolute;
+  top: 6rem;
+  left: 2rem;
+  color: hsl(0deg, 87%, 67%);
+  font-style: italic;
+  display: none;
+  font-size: 16px;
+  display: none;
+}
+main .short-container .form-container .show-error {
+  display: block;
+}
+main .short-container input,
+main .short-container button {
+  padding: 0.7rem 0;
   border-radius: 0.5rem;
   border: none;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
-main button {
+main .short-container button {
   background-color: hsl(180deg, 66%, 49%);
   color: white;
   border: none;
   font-weight: 700;
   cursor: pointer;
 }
-main button:hover {
+main .short-container button:hover {
   background-color: #51dbdb;
 }
-main .error {
-  position: absolute;
-  top: 3.3rem;
-  color: hsl(0deg, 87%, 67%);
-  font-style: italic;
-  display: none;
-  font-size: 16px;
+main .short-container .short-results {
+  display: grid;
+  gap: 2rem;
 }
-main .show-error {
-  display: block;
-}
-main .short-result {
+main .short-container .short-results .short-result {
   background-color: white;
   padding: 1rem;
   border-radius: 0.5rem;
   color: hsl(260deg, 8%, 14%);
   display: grid;
   gap: 1rem;
-  margin-bottom: 2rem;
 }
-main .short-result a {
+main .short-container .short-results .short-result a {
   color: hsl(180deg, 66%, 49%);
 }
-main .short-result .copy-btn {
-  width: 100%;
+main .short-container .short-results .short-result .result-copy {
+  display: grid;
 }
-main .short-result .copied.copy-btn {
+main .short-container .short-results .short-result .result-copy .copy-btn {
+  margin-top: 1rem;
+}
+main .short-container .short-results .short-result .result-copy .copied.copy-btn {
   background-color: hsl(257deg, 27%, 26%);
 }
-main .short-result .copied.copy-btn:hover {
+main .short-container .short-results .short-result .result-copy .copied.copy-btn:hover {
   background-color: #514375;
 }
 main .product-info .product-title {
   text-align: center;
-  margin: 6rem 0;
+  max-width: 35rem;
+  margin: 6rem auto;
 }
 main .product-info .product-title h2 {
   margin-bottom: 1rem;
@@ -338,7 +351,7 @@ main .product-info .services-container .product-services {
 }
 main .product-info .services-container .product-services .img-container {
   position: absolute;
-  top: -2rem;
+  top: -2.5rem;
   right: 50%;
   left: 50%;
   transform: translate(-50%);
@@ -352,6 +365,7 @@ main .product-info .services-container .product-services .img-container {
 }
 main .product-info .services-container .product-services h2 {
   color: hsl(257deg, 27%, 26%);
+  margin-bottom: 1rem;
 }
 main .product-info .services-container .product-services p {
   color: hsl(257deg, 7%, 63%);
@@ -395,6 +409,70 @@ main .product-get-started a:hover {
   background-color: #51dbdb;
 }
 
+/*===== RESPONSIVE =====*/
+@media (min-width: 768px) {
+  main {
+    padding-top: 6rem;
+  }
+  main .short-container .form-container {
+    background-image: url(/images/bg-shorten-desktop.svg);
+    display: grid;
+    padding: 3rem;
+    grid-template-columns: 3fr 1fr;
+  }
+  main .short-container .form-container .error {
+    top: 7rem;
+    left: 3rem;
+  }
+  main .short-container .short-results {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  main .short-container .short-results {
+    grid-template-columns: 1fr;
+  }
+  main .short-container .short-results .short-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .short-container .short-results .short-result hr {
+    display: none;
+  }
+  main .short-container .short-results .short-result button {
+    width: 2rem;
+  }
+  main .short-container .short-results .short-result .result-copy {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  main .short-container .short-results .short-result .result-copy .copy-btn {
+    width: 7rem;
+    margin-top: 0;
+  }
+}
+@media (min-width: 1200px) {
+  main .product-info .services-container {
+    display: flex;
+    gap: 3rem;
+  }
+  main .product-info .services-container .product-services .img-container {
+    left: 5rem;
+  }
+  main .product-info .services-container article:nth-child(1) {
+    transform: translateY(-3rem);
+  }
+  main .product-info .services-container article:nth-child(3) {
+    transform: translateY(3rem);
+  }
+  main .product-info .services-container:before {
+    top: 8rem;
+    width: 100%;
+    height: 0.4rem;
+  }
+}
 footer {
   padding: 3rem 0;
   background-color: hsl(260deg, 8%, 14%);
