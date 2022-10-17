@@ -72,7 +72,7 @@ main {
 
       .short-results {
          display: grid;
-         gap: 2rem;
+         gap: 1rem;
 
          .short-result {
             background-color: white;
@@ -102,8 +102,6 @@ main {
                   background-color: lighten($dark-violet, 10%);
                }
             }
-
-
          }
       }
    }
@@ -233,8 +231,12 @@ main {
          }
       }
 
-      .product-get-started{
+      .product-get-started {
          background-image: url(/images/bg-boost-desktop.svg);
+
+         h2 {
+            font-size: 2.5rem;
+         }
       }
    }
 }
@@ -272,6 +274,15 @@ main {
 
                }
             }
+         }
+
+
+      }
+
+      .product-get-started {
+
+         h2 {
+            font-size: 3rem;
          }
       }
    }

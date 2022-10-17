@@ -175,6 +175,7 @@ header .banner-info {
   text-align: center;
 }
 header .banner-info h1 {
+  font-size: 3rem;
   max-width: 30rem;
   color: hsl(260deg, 8%, 14%);
 }
@@ -204,36 +205,37 @@ header .banner-info a:hover {
   header .banner {
     margin-bottom: 0;
   }
+  header .banner img {
+    max-width: 550px;
+  }
   header .header-container {
     display: flex;
-    gap: 2.5rem;
   }
   header .header-container .banner {
     transform: translateX(8rem);
     order: 1;
   }
+  header .header-container .banner-info h1 {
+    font-size: 3rem;
+  }
   header .banner-info {
     align-items: flex-start;
     text-align: start;
-  }
-  header .banner-info h1 {
-    font-size: 4rem;
   }
   header .banner-info p {
     font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
-  header .header-container {
-    display: flex;
-    gap: 2.5rem;
-  }
   header .header-container .banner {
-    transform: translateX(8rem);
+    transform: translateX(10rem);
     order: 1;
   }
   header .header-container .banner img {
     max-width: 700px;
+  }
+  header .header-container .banner-info h1 {
+    font-size: 4rem;
   }
 }
 main {
@@ -300,7 +302,7 @@ main .short-container button:hover {
 }
 main .short-container .short-results {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
 }
 main .short-container .short-results .short-result {
   background-color: white;
@@ -430,6 +432,9 @@ main .product-get-started a:hover {
   main .product-get-started {
     background-image: url(/images/bg-boost-desktop.svg);
   }
+  main .product-get-started h2 {
+    font-size: 2.5rem;
+  }
 }
 @media (min-width: 1024px) {
   main .short-container .short-results {
@@ -454,6 +459,9 @@ main .product-get-started a:hover {
   main .short-container .short-results .short-result .result-copy .copy-btn {
     width: 7rem;
     margin-top: 0;
+  }
+  main .product-get-started h2 {
+    font-size: 3rem;
   }
 }
 @media (min-width: 1200px) {
