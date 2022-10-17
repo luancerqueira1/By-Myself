@@ -1,3 +1,4 @@
+/*===== MEDIA QUERIES VARIABLES =====*/
 * {
   margin: 0;
   padding: 0;
@@ -25,14 +26,17 @@ a {
 
 nav {
   padding: 2rem 0;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: space-between;
 }
-
-.menu-btn .bar-top,
-.menu-btn .bar-middle,
-.menu-btn .bar-bottom {
+nav .logo {
+  display: grid;
+  align-items: center;
+  margin-right: 3rem;
+}
+nav .menu-btn .bar-top,
+nav .menu-btn .bar-middle,
+nav .menu-btn .bar-bottom {
   width: 1.5rem;
   height: 3px;
   margin-bottom: 5px;
@@ -42,14 +46,11 @@ nav {
   cursor: pointer;
   transition: all 350ms linear;
 }
-
-.nav-links {
+nav .nav-links {
   position: absolute;
   left: 0;
   right: 0;
-  width: 90%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
@@ -63,37 +64,39 @@ nav {
   transform: translateY(-100%);
   z-index: 99;
 }
-.nav-links .bar {
+nav .nav-links .bar {
   width: 100%;
   height: 1px;
   background-color: hsl(257deg, 7%, 63%);
 }
-.nav-links li {
-  width: 100%;
+nav .nav-links li {
   margin-bottom: 1rem;
 }
-.nav-links a {
+nav .nav-links a {
   color: white;
   font-weight: 700;
+  transition: all 350ms linear;
 }
-.nav-links .nav-links-login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+nav .nav-links a:hover {
+  color: hsl(180deg, 66%, 49%);
+}
+nav .nav-links .nav-links-login {
   align-items: center;
 }
-.nav-links .nav-links-login .sign-up {
+nav .nav-links .nav-links-login .sign-up {
   background-color: hsl(180deg, 66%, 49%);
-  width: 100%;
   padding: 0.7rem 2rem;
   border-radius: 5rem;
   transition: all 200ms ease;
+  color: white;
 }
-.nav-links .nav-links-login .sign-up:hover {
-  background-color: #51dbdb;
+nav .nav-links .nav-links-login .sign-up a {
+  color: white;
 }
-
-.active.nav-links {
+nav .nav-links .nav-links-login .sign-up:hover {
+  background-color: #7ce4e4;
+}
+nav .active.nav-links {
   transition: all 350ms linear;
   visibility: visible;
   opacity: 1;
@@ -101,6 +104,57 @@ nav {
   transform: translateY(0);
 }
 
+/*===== RESPONSIVE =====*/
+@media (min-width: 768px) {
+  nav .menu-btn {
+    display: none;
+  }
+  nav .nav-links {
+    position: initial;
+    flex-direction: row;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    background-color: white;
+    padding: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav .nav-links li {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 0;
+  }
+  nav .nav-links a {
+    color: hsl(257deg, 7%, 63%);
+  }
+  nav .nav-links .sign-up {
+    color: white;
+  }
+  nav .nav-links .nav-links-login {
+    display: flex;
+  }
+  nav .nav-links .nav-links-login .sign-up {
+    transition: all 350ms linear;
+    padding: 0.25rem 2rem;
+    margin-left: 1.5rem;
+  }
+  nav .nav-links .nav-links-login .sign-up a {
+    font-size: 16px;
+  }
+  nav .nav-links .nav-links-login .sign-up:hover {
+    background-color: #51dbdb;
+  }
+  nav .nav-links-options {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+  }
+  nav .bar {
+    display: none;
+  }
+}
 header {
   margin-bottom: 9rem;
   overflow: hidden;
@@ -131,8 +185,13 @@ header .banner-info a {
   color: white;
   padding: 0.7em 3em;
   border-radius: 5rem;
+  transition: all 350ms linear;
+}
+header .banner-info a:hover {
+  background-color: #7ce4e4;
 }
 
+/*===== RESPONSIVE =====*/
 main {
   background-color: hsl(225deg, 33%, 95%);
   padding-top: 9rem;
@@ -161,7 +220,7 @@ main form {
 }
 main input,
 main button {
-  height: 3rem;
+  padding: 0.7rem 2rem;
   border-radius: 0.5rem;
   border: none;
   font-family: "Poppins", sans-serif;

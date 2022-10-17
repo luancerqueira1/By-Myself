@@ -32,6 +32,13 @@ header {
          color: white;
          padding: .7em 3em;
          border-radius: 5rem;
+         transition: $transition;
+
+         &:hover {
+            background-color: lighten($color: $cyan, $amount: 20%);
+         }
       }
    }
 }
+
+/*===== RESPONSIVE =====*/

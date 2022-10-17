@@ -30,13 +30,11 @@ main {
 
    input,
    button {
-      height: 3rem;
+      padding: .7rem 2rem;
       border-radius: .5rem;
       border: none;
       font-family: $font-primary;
       font-size: $font-size;
-
-
    }
 
    button {
