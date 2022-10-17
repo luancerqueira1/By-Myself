@@ -1,6 +1,7 @@
 @use 'variables' as *;
 
 header {
+   margin-top: 2rem;
    margin-bottom: 9rem;
    overflow: hidden;
 
@@ -8,12 +9,11 @@ header {
       margin-bottom: 2rem;
 
       img {
-         max-width:500px;
-         transform: translateX(1rem);
+         max-width: 500px;
       }
    }
 
-   .banner-info{
+   .banner-info {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -22,11 +22,15 @@ header {
       text-align: center;
 
       h1 {
+         max-width: 30rem;
          color: $very-dark-violet;
       }
+
       p {
+         max-width: 30rem;
          color: $grayish-violet;
       }
+
       a {
          background-color: $cyan;
          color: white;
@@ -42,3 +46,65 @@ header {
 }
 
 /*===== RESPONSIVE =====*/
+@media (min-width:$breakpoint-phone) {
+
+   header {
+
+      .banner {
+         display: grid;
+         justify-content: center;
+      }
+   }
+}
+
+@media (min-width:$breakpoint-md) {
+
+   header {
+      .banner {
+         margin-bottom: 0;
+      }
+
+      .header-container {
+         display: flex;
+         gap: 2.5rem;
+         overflow: hidden;
+         .banner {
+            transform: translateX(8rem);
+            order: 1;
+
+         }
+      }
+
+      .banner-info {
+         align-items: flex-start;
+         text-align: start;
+
+         h1 {
+            font-size: 3rem;
+         }
+
+         p {
+            font-size: 20px;
+         }
+      }
+   }
+}
+
+@media (min-width:$breakpoint-lg) {
+   header {
+
+      .header-container {
+         display: flex;
+         gap: 2.5rem;
+
+         .banner {
+            transform: translateX(8rem);
+            order: 1;
+
+            img {
+               max-width: 600px;
+            }
+         }
+      }
+   }
+}

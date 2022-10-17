@@ -156,6 +156,7 @@ nav .active.nav-links {
   }
 }
 header {
+  margin-top: 2rem;
   margin-bottom: 9rem;
   overflow: hidden;
 }
@@ -164,7 +165,6 @@ header .banner {
 }
 header .banner img {
   max-width: 500px;
-  transform: translateX(1rem);
 }
 header .banner-info {
   display: flex;
@@ -175,9 +175,11 @@ header .banner-info {
   text-align: center;
 }
 header .banner-info h1 {
+  max-width: 30rem;
   color: hsl(260deg, 8%, 14%);
 }
 header .banner-info p {
+  max-width: 30rem;
   color: hsl(257deg, 7%, 63%);
 }
 header .banner-info a {
@@ -192,6 +194,49 @@ header .banner-info a:hover {
 }
 
 /*===== RESPONSIVE =====*/
+@media (min-width: 640px) {
+  header .banner {
+    display: grid;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  header .banner {
+    margin-bottom: 0;
+  }
+  header .header-container {
+    display: flex;
+    gap: 2.5rem;
+    overflow: hidden;
+  }
+  header .header-container .banner {
+    transform: translateX(8rem);
+    order: 1;
+  }
+  header .banner-info {
+    align-items: flex-start;
+    text-align: start;
+  }
+  header .banner-info h1 {
+    font-size: 3rem;
+  }
+  header .banner-info p {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  header .header-container {
+    display: flex;
+    gap: 2.5rem;
+  }
+  header .header-container .banner {
+    transform: translateX(8rem);
+    order: 1;
+  }
+  header .header-container .banner img {
+    max-width: 600px;
+  }
+}
 main {
   background-color: hsl(225deg, 33%, 95%);
   padding-top: 9rem;
