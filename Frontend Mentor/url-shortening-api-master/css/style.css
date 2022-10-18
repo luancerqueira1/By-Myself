@@ -315,12 +315,22 @@ main .short-container .short-results .short-result {
   color: hsl(260deg, 8%, 14%);
   display: grid;
   gap: 1rem;
+  transition: opacity 1s ease-out;
+  opacity: 0;
+  display: none;
+  overflow: hidden;
+}
+main .short-container .short-results .short-result .link-to-shorten {
+  overflow: hidden;
 }
 main .short-container .short-results .short-result a {
   color: hsl(180deg, 66%, 49%);
 }
 main .short-container .short-results .short-result .result-copy {
   display: grid;
+}
+main .short-container .short-results .short-result .result-copy .link-shortened {
+  overflow: hidden;
 }
 main .short-container .short-results .short-result .result-copy .copy-btn {
   margin-top: 1rem;
@@ -330,6 +340,10 @@ main .short-container .short-results .short-result .result-copy .copied.copy-btn
 }
 main .short-container .short-results .short-result .result-copy .copied.copy-btn:hover {
   background-color: #514375;
+}
+main .short-container .short-results .short-result.active {
+  display: block;
+  opacity: 1;
 }
 main .product-info .product-title {
   text-align: center;

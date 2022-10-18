@@ -82,6 +82,15 @@ main {
             color: $very-dark-violet;
             display: grid;
             gap: 1rem;
+            transition: opacity 1s ease-out;
+            opacity: 0;
+            display: none;
+            overflow: hidden;
+
+            .link-to-shorten {
+               overflow: hidden;
+
+            }
 
             a {
                color: $cyan;
@@ -89,6 +98,10 @@ main {
 
             .result-copy {
                display: grid;
+
+               .link-shortened {
+                  overflow: hidden;
+               }
 
 
                .copy-btn {
@@ -104,7 +117,14 @@ main {
                }
             }
          }
+
+         .short-result.active {
+            display: block;
+            opacity: 1;
+         }
       }
+
+
    }
 
    .product-info {
