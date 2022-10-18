@@ -27,7 +27,7 @@ main {
 
          input {
             padding: .5rem;
-            // height: 1rem;
+            border: 2px solid transparent;
          }
 
          input.error-input {
@@ -272,7 +272,7 @@ main {
             grid-template-columns: 1fr;
 
             .short-result {
-               display: flex;
+               border: 2px solid red;
                justify-content: space-between;
                align-items: center;
 

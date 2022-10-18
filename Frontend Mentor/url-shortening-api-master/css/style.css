@@ -269,6 +269,7 @@ main .short-container .form-container {
 }
 main .short-container .form-container input {
   padding: 0.5rem;
+  border: 2px solid transparent;
 }
 main .short-container .form-container input.error-input {
   border: 2px solid hsl(0deg, 87%, 67%);
@@ -460,7 +461,7 @@ main .product-get-started a:hover {
     grid-template-columns: 1fr;
   }
   main .short-container .short-results .short-result {
-    display: flex;
+    border: 2px solid red;
     justify-content: space-between;
     align-items: center;
   }
