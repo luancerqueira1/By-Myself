@@ -26,7 +26,8 @@ main {
          margin: 0 auto;
 
          input {
-            padding: 1rem;
+            padding: .5rem;
+            // height: 1rem;
          }
 
          input.error-input {
@@ -35,7 +36,7 @@ main {
 
          .error {
             position: absolute;
-            top: 6rem;
+            top: 5rem;
             left: 2rem;
             color: $red;
             font-style: italic;
@@ -216,12 +217,13 @@ main {
 
          .form-container {
             background-image: url(/images/bg-shorten-desktop.svg);
+            background-size: cover;
             display: grid;
-            padding: 3rem;
+            padding: 2.5rem;
             grid-template-columns: 3fr 1fr;
 
             .error {
-               top: 7rem;
+               top: 6rem;
                left: 3rem;
             }
          }
@@ -275,8 +277,6 @@ main {
                }
             }
          }
-
-
       }
 
       .product-get-started {

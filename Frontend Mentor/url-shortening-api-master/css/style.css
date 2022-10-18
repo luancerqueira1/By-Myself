@@ -173,10 +173,10 @@ header .banner-info {
   gap: 1rem;
   align-items: center;
   text-align: center;
+  max-width: 40rem;
 }
 header .banner-info h1 {
   font-size: 3rem;
-  max-width: 30rem;
   color: hsl(260deg, 8%, 14%);
 }
 header .banner-info p {
@@ -228,14 +228,18 @@ header .banner-info a:hover {
 }
 @media (min-width: 1200px) {
   header .header-container .banner {
-    transform: translateX(10rem);
     order: 1;
   }
   header .header-container .banner img {
     max-width: 700px;
   }
   header .header-container .banner-info h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 1600px) {
+  header .header-container .banner-info h1 {
+    font-size: 4.5rem;
   }
 }
 main {
@@ -264,14 +268,14 @@ main .short-container .form-container {
   margin: 0 auto;
 }
 main .short-container .form-container input {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 main .short-container .form-container input.error-input {
   border: 2px solid hsl(0deg, 87%, 67%);
 }
 main .short-container .form-container .error {
   position: absolute;
-  top: 6rem;
+  top: 5rem;
   left: 2rem;
   color: hsl(0deg, 87%, 67%);
   font-style: italic;
@@ -418,12 +422,13 @@ main .product-get-started a:hover {
   }
   main .short-container .form-container {
     background-image: url(/images/bg-shorten-desktop.svg);
+    background-size: cover;
     display: grid;
-    padding: 3rem;
+    padding: 2.5rem;
     grid-template-columns: 3fr 1fr;
   }
   main .short-container .form-container .error {
-    top: 7rem;
+    top: 6rem;
     left: 3rem;
   }
   main .short-container .short-results {
