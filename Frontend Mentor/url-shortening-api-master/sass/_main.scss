@@ -80,16 +80,17 @@ main {
             padding: 1rem;
             border-radius: .5rem;
             color: $very-dark-violet;
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 1rem;
             transition: opacity 1s ease-out;
+            transition: $transition;
             opacity: 0;
             display: none;
             overflow: hidden;
 
             .link-to-shorten {
                overflow: hidden;
-
             }
 
             a {
@@ -99,10 +100,13 @@ main {
             .result-copy {
                display: grid;
 
+               button{
+                  align-self: flex-end;
+               }
+
                .link-shortened {
                   overflow: hidden;
                }
-
 
                .copy-btn {
                   margin-top: 1rem;
@@ -119,7 +123,7 @@ main {
          }
 
          .short-result.active {
-            display: block;
+            display: flex;
             opacity: 1;
          }
       }
@@ -250,6 +254,10 @@ main {
 
          .short-results {
             grid-template-columns: 1fr 1fr;
+
+            .short-result{
+               justify-content: flex-end;
+            }
          }
       }
 
@@ -272,7 +280,7 @@ main {
             grid-template-columns: 1fr;
 
             .short-result {
-               border: 2px solid red;
+               flex-direction: row;
                justify-content: space-between;
                align-items: center;
 
@@ -286,14 +294,14 @@ main {
 
                .result-copy {
                   display: flex;
-                  gap: 3rem;
+                  gap: 2rem;
                   align-items: center;
+
 
                   .copy-btn {
                      width: 7rem;
                      margin-top: 0;
                   }
-
                }
             }
          }

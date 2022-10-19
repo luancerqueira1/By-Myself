@@ -1,4 +1,3 @@
-// const link = 'https://twitter.com/FrancescoCiull4/status/1581188624606842881';
 
 const apiResponse = async (URL) => {
    try {
@@ -14,38 +13,43 @@ const apiResponse = async (URL) => {
    }
 };
 
-/*====== GET LINK =====*/
+/*====== SET LINK =====*/
+const input = document.querySelector('#input-link');
+const submitBtn = document.querySelector('#submit-btn');
 
-getLink();
+submitBtn.addEventListener('click', function (e) {
+   e.preventDefault();
+   if (!input.value || !validURL(input.value)) {
+      showInputError();
+   }
 
-function getLink() {
-   const input = document.querySelector('#input-link');
-   const submitBtn = document.querySelector('#submit-btn');
+   const inputURL = input.value;
+   const fullURL = `https://api.shrtco.de/v2/shorten?url=${inputURL}`;
+   apiResponse(fullURL);
 
-   submitBtn.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (!input.value) {
-         showInputError();
-      }
+   input.value = '';
+});
 
-      const inputURL = input.value;
-      const fullURL = `https://api.shrtco.de/v2/shorten?url=${inputURL}`;
-      apiResponse(fullURL);
-
-      input.value = '';
-   });
-}
 
 /*====== SHOW RESULTS & COPY =====*/
 function displayResult(toShort, shortened) {
-   const linkToShort = document.querySelector('.link-to-shorten');
-   const shortResult = document.querySelector('.shortened-result');
-   const shortContainer = document.querySelector('.short-result');
+   const resultsContainer = document.querySelector('.short-results');
+   const SingleResult = document.createElement('div');
 
-   linkToShort.innerHTML = `<p>${toShort}</p>`;
-   shortResult.setAttribute('href', `https://${shortened}`);
-   shortResult.textContent = shortened;
-   shortContainer.classList.add('active');
+   SingleResult.classList.add('short-result');
+   SingleResult.innerHTML = `
+            <div class="link-to-shorten">
+              <p>${toShort}</p>
+            </div>
+            <hr>
+            <div class="result-copy">
+              <div class="link-shortened">
+                <a class="short-link  shortened-result" href="https://${shortened}" target="_blank">${shortened}</a>
+              </div>
+              <button class="copy-btn">Copy</button>
+              </div>`;
+   SingleResult.classList.add('active');
+   resultsContainer.prepend(SingleResult);
 
    //COPY
    const copyBtn = document.querySelector('.copy-btn');
@@ -54,7 +58,7 @@ function displayResult(toShort, shortened) {
       navigator.clipboard.writeText(shortened);
 
       copyBtn.classList.add('copied');
-      copyBtn.textContent = 'copied!'
+      copyBtn.textContent = 'copied!';
    });
 }
 
@@ -72,10 +76,22 @@ function showInputError() {
    }, 3000);
 }
 
-
 const nav = document.querySelector('.nav-links');
 const navBtn = document.querySelector('.menu-btn');
 
 navBtn.addEventListener('click', function () {
    nav.classList.toggle('active');
 });
+
+function validURL(str) {
+   var pattern = new RegExp(
+      '^(https?:\\/\\/)?' + // protocol
+         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+         '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+         '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+         '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+         '(\\#[-a-z\\d_]*)?$',
+      'i'
+   ); // fragment locator
+   return !!pattern.test(str);
+}

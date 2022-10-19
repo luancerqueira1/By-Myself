@@ -314,9 +314,11 @@ main .short-container .short-results .short-result {
   padding: 1rem;
   border-radius: 0.5rem;
   color: hsl(260deg, 8%, 14%);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   transition: opacity 1s ease-out;
+  transition: all 350ms linear;
   opacity: 0;
   display: none;
   overflow: hidden;
@@ -329,6 +331,9 @@ main .short-container .short-results .short-result a {
 }
 main .short-container .short-results .short-result .result-copy {
   display: grid;
+}
+main .short-container .short-results .short-result .result-copy button {
+  align-self: flex-end;
 }
 main .short-container .short-results .short-result .result-copy .link-shortened {
   overflow: hidden;
@@ -343,7 +348,7 @@ main .short-container .short-results .short-result .result-copy .copied.copy-btn
   background-color: #514375;
 }
 main .short-container .short-results .short-result.active {
-  display: block;
+  display: flex;
   opacity: 1;
 }
 main .product-info .product-title {
@@ -449,6 +454,9 @@ main .product-get-started a:hover {
   main .short-container .short-results {
     grid-template-columns: 1fr 1fr;
   }
+  main .short-container .short-results .short-result {
+    justify-content: flex-end;
+  }
   main .product-get-started {
     background-image: url(/images/bg-boost-desktop.svg);
   }
@@ -461,7 +469,7 @@ main .product-get-started a:hover {
     grid-template-columns: 1fr;
   }
   main .short-container .short-results .short-result {
-    border: 2px solid red;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -473,7 +481,7 @@ main .product-get-started a:hover {
   }
   main .short-container .short-results .short-result .result-copy {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
   }
   main .short-container .short-results .short-result .result-copy .copy-btn {
